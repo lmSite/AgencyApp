@@ -1,0 +1,116 @@
+<style>
+  #agencySection input,
+  #agencySection  input:not([type="button"]),#agencySection input:not([type="image"])
+    {
+    width: 100%;
+  }
+</style>
+<div id="agencySection" class="container">
+  
+  <!-- title -->
+  <h1 class="my-5 title-tab">Agency</h1>
+  
+  <div class="row ">
+
+    <div class="col ">  
+
+      <!-- Action info. Msg -->
+      <div class="alert alert-success" role="alert" ng-show="isAgencySaved">
+        inforamation has been saved .
+      </div>
+
+
+      <!-- Form -->
+      <form>
+        <p>
+          <span class="lbl">Agency Name </span>
+          <br>
+          <input type="text" id="agency" ng-model="activeUser.agency" class="rounded p-1" readonly>
+          <br>
+        </p>
+
+
+        <p>
+          <span class="lbl">Email </span>
+          <br>
+          <input type="email" id="email" ng-model="activeUser.email" placeholder="Enter email" class="rounded p-1">
+          <br>
+        </p>
+
+
+        <p>
+          <span class="lbl">Password </span>
+          <br>
+          <input type="password" id="password" ng-model="activeUser.password" placeholder="Enter password" class="rounded p-1">
+          <br>
+        </p>
+
+        <!-- Address -->
+        <div class="mt-5">
+          <span class="lbl "><u>Address</u> </span>
+          <br>
+
+          <span class="lbl">city </span>
+          <br>
+          <input type="text" id="city" ng-model="activeUser.city" placeholder="Enter city" class="rounded p-1">
+          <br>
+
+
+          <span class="lbl">street </span>
+          <br>
+          <input type="text" id="street" ng-model="activeUser.street" placeholder="Enter street" class="rounded p-1">
+          <br>
+
+
+          <span class="lbl">building </span>
+          <br>
+          <input type="number" id="building" ng-model="activeUser.building" placeholder="Enter building number" class="rounded p-1">
+          <br>
+
+
+          <span class="lbl">postal </span>
+          <br>
+          <input type="number" id="postal" ng-model="activeUser.postal" placeholder="Enter postal code" class="rounded p-1">
+          <br>
+
+
+        </div>
+
+        <div class="mt-5">
+          <span class="lbl">Image Url </span>
+          <br>
+          <input type="url" id="imgUrl" ng-model="activeUser.imgUrl" placeholder="Enter agency's Image Url" class="rounded p-1">
+        </div>
+
+        <!-- Action btns -->
+        <br>
+        <button type="button" class="btn btn-outline-secondary m-3 wBtnWidth">Cancel</button>
+        <button type="button" class="btn btn-outline-success wBtnWidth" ng-click="saveAgencyUpdate()">Save</button>
+
+        <br>
+        <br>
+        
+        
+        <!-- more settings -->
+        <a href="javascript:void(0)" class="text-info" ng-click="isMoreSettings=true">more settings ...</a>
+        <br>
+
+        <!-- Close Account -->
+        <button type="button" class="btn btn-outline-danger mt-3 " data-toggle="modal" data-target="#myModal" ng-show="isMoreSettings">
+          Close my account
+        </button>
+        <br>
+
+        <div ng-include="'app/agency/closeAccount.html'"></div>
+        <!-- End  Close Account -->
+
+      </form>
+    </div>
+
+
+<!-- Agency Image =>  activeUser.imgUrl -->
+    <div class="col">
+      <img ng-src="{{activeUser.imgUrl}}" alt="agency image" class="img-thumbnail ">
+    </div>
+  </div>
+</div>

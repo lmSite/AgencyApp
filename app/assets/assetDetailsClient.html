@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="css/assetD.css">
+
+<div id="image-gallery" class="container-fluid bg-white">
+
+    <!-- closeWin -->
+    <div class="row ">
+        <a href="javascript:void(0)" ng-click="closeWin()" 
+        class="fontSize-xl d-block mx-auto mb-3 closeWin">
+        x
+        </a>
+    </div>
+
+
+
+    <div id="bodySec" class="row  mx-1 w-100">
+<!-- leftSide -->
+        <div id="leftSide" class="col-6 ">
+        
+        <!-- gallery -->
+            <div id="gallery" class="">
+
+                <div class="mx-auto bgBlackT py-1" ng-show="img1">
+                   
+                    <!-- 5 imgs -->
+                    <ul class="ul-v pb-0 mb-1 text-center">
+                        <li class="li-v"><a href="javascript:void(0)"><img ng-src="{{img1=activeAsset.imgUrl[0]}}"
+                                    ng-model="img1" class="img-gal-20 border" ng-click="image=img1;"></a></li>
+                        <li class="li-v"><a href="javascript:void(0)"><img ng-src="{{img2=activeAsset.imgUrl[1]}}"
+                                    ng-model="img2" class="img-gal-20 border" ng-click="image=img2;"></a></li>
+                        <li class="li-v"><a href="javascript:void(0)"><img ng-src="{{img3=activeAsset.imgUrl[2]}}"
+                                    ng-model="img3" class="img-gal-20 border" ng-click="image=img3;"></a></li>
+                        <li class="li-v"><a href="javascript:void(0)"><img ng-src="{{img4=activeAsset.imgUrl[3]}}"
+                                    ng-model="img4" class="img-gal-20 border" ng-click="image=img4;"></a></li>
+                        <li class="li-v"><a href="javascript:void(0)"><img ng-src="{{img5=activeAsset.imgUrl[4]}}"
+                                    ng-model="img5" class="img-gal-20 border" ng-click="image=img5;"></a></li>
+                    </ul>
+
+                    <br>
+
+                    <!-- Main img -->
+                    <div style="background-image: url('{{image}}');width:98%" class="hero-image mx-auto border">
+                    </div>
+
+                </div>
+
+            </div>
+          
+           <!-- Map -->
+            <iframe width="100%" height="28%" frameborder="0" style="top:0;left:0;border:0px;z-index:100" ng-src="{{query}}"></iframe>
+       
+        </div>
+
+
+
+
+<!-- rightSide -->
+        <div id="rightSide" class="col-6 ml-auto bgBlackT text-light" style="z-index: 102;">
+        
+        <!-- assetInfo -->
+            <div id="assetInfo" class="p-1">
+
+                <div class="row p-1 size text-left">
+                    <div class="assetDetails w-100">
+                      
+                        <!-- 1 sec :  title -->
+                        <h2 class="text-undeline textTitle text-center">Asset Details</h2>
+                        <hr />
+
+
+                        <!-- 2 sec:  address , price  -->
+                        <div class=" p-1 address lead text-center">
+                            
+                            <h4 class="col title ">{{activeAsset.city + ' , ' + activeAsset.street + " " +
+                                activeAsset.building}}
+                            </h4>
+
+                            <h4 class="col  textHighLight">{{(activeAsset.price | number) +" ILS" }}</h4>
+                        
+                        </div>
+                        <hr />
+
+
+                        <!-- 3 sec : Property Info  -->
+                        <h5 class="text-left title textY">Property Info. </h5>
+                       
+                        <!-- 1 line  -->
+                        <div class="row ">
+
+                            <div class="col-3 text-left title ">Size (mr) :</div>
+                            <div class="col-3 text-left">{{activeAsset.builtSize }}</div>
+
+                            <div class="col-2 text-left title">Rooms :</div>
+                            <div class="col">{{activeAsset.rooms }}</div>
+
+                            <div class="col-2 text-right title">Floor :</div>
+                            <div class="col ">{{activeAsset.floor }}</div>
+
+                        </div>
+
+                        <!-- 2 line -->
+                        <div class="row  balcony ">
+                            
+                            <div class="col-2 text-left title">Balcony :</div>
+                            <div class="col-2">{{activeAsset.balcony }}</div>
+
+                            <div class="col-1">&nbsp;</div>
+
+                            <div class="col-4 text-right title">Evacuation Date :</div>
+                            <div class="col-3">{{activeAsset.evacuationDate }}</div>
+
+                        </div>
+                        <hr />
+
+                        <!-- 4 sec : general Info =>checkbox s -->
+                        <div class=" gInfo">
+
+                            <div class="row">
+
+                                <div class="col">
+                                    <input type="checkbox" id="airCondition" ng-model="activeAsset.airCondition"
+                                        disabled>
+                                    Air Condition
+                                </div>
+
+                                <div class="col"> <input type="checkbox" id="elevator" ng-model="activeAsset.elevator"
+                                        disabled> 
+                                    Elevator
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col">
+                                    <input type="checkbox" id="bars" ng-model="activeAsset.bars" disabled> 
+                                    Bars
+                                </div>
+
+                                <div class="col">
+                                    <input type="checkbox" id="parking" ng-model="activeAsset.parking" disabled>
+                                    Parking
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <hr />
+
+
+                        <!-- 5 sec : Additional Info  -->
+                        <div class="">
+
+                            <h5 class="text-left title textY">Additional Info </h5>
+                            <div class=" mb-2 pl-1 assetInfo">{{activeAsset.info }}</div>
+                      
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>

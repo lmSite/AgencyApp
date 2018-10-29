@@ -1,0 +1,2668 @@
+<!-- 
+emailJS userid: user_yNLBji1EomGRF3Z7etopN
+db
+===
+https://json-server-heroku-jukpdzawez.now.sh
+
+
+old: 
+ https://json-server-heroku-yrjlcvhqvv.now.sh
+
+/assets?userId=1
+   /users
+
+json-server-heroku
+===================
+cd C:\lm_docs\json-server-heroku
+
+now --public
+
+
+
+
+
+test db(readonly):
+===================
+	https://my-json-server.typicode.com/	
+	http://my-json-server.typicode.com/lmSite/AgencyApp/users/1
+
+
+
+
+
+<div ng-repeat="value in [4, 4] track by $index"></div>
+
+
+TODO's:
+=======
+TODO:db 
+TODO:admin dashbord : assets => search asset   ,   asset create/update/delete (modal)
+TODO:global site for agencies  (in future)
+TODO:add to index.html access for clients a new link => list of assets + chg the view to cards
+TODO: add googlemaps api
+
+
+FIxme's
+=======
+FIXME:
+FIXME:
+
+
+
+
+
+
+
+
+db
+===
+
+assets
+        type: apartment , privat house , property
+  forPurpose: rent , sale    
+
+
+
+
+
+
+
+
+
+tabs
+======
+// $scope.scrollTo = function(scrollLocation)   
+    // {  
+    //     $location.hash(scrollLocation);  
+    //     $anchorScroll();  
+    
+    // }  
+
+http://en.netzah.org/
+Cities
+=======
+Acre
+,Afula
+,Arad
+,Ariel
+,Ashdod
+,Ashkelon
+,Bat Yam
+,Beersheba
+,Beit Shean
+,Beit Shemesh
+,Beitar Illit
+,Bnei Brak
+,Dimona
+,Eilat
+,Elad
+,Givat Shmuel
+,Givatayim
+,Hadera
+,Haifa
+,Herzliya
+,Hod HaSharon
+,Holon
+,Jerusalem
+,Karmiel
+,Kiryat Ata
+,Kiryat Bialik
+,Kiryat Gat
+,Kiryat Malakhi
+,Kiryat Motzkin
+,Kiryat Ono
+,Kiryat Shmona
+,Kiryat Yam
+,Kfar Saba
+,Lod
+,Maale Adumim
+,Maalot-Tarshiha
+,Migdal HaEmek
+,Modiin-Maccabim-Reut
+,Modiin Illit
+,Nahariya
+,Nazareth Illit 
+,Nesher
+,Ness Ziona
+,Netanya
+,Netivot
+,Ofakim
+,Or Akiva
+,Or Yehuda
+,Petah Tikva
+,Raanana
+,Ramat Gan
+,Ramat HaSharon
+,Ramla
+,Rehovot
+,Rishon LeZion
+,Rosh HaAyin
+,Safed
+,Sderot
+,Tel Aviv-Yaffo
+,Tiberias
+,Tirat Carmel
+,Yavne
+,Yehud-Monosson
+,Yokneam
+
+
+
+
+
+ -->
+
+
+yesuvim
+
+<select name=LocalityCode dir=rtl class="search" style="width=150 px; background-color:#e1f1ff;scrollbar-face-color: #ffffff;scrollbar-highlight-color: #033568;scrollbar-3dlight-color: #033568;scrollbar-darkshadow-color: #033568;scrollbar-shadow-color: #033568;scrollbar-arrow-color: #033568;scrollbar-track-color: #adcceb" size=4 onclick=ShowSelectionText(LocalityCode) class="search">
+
+		
+		<option VALUE=472>אבו גוש</option>
+		
+		<option VALUE=473>אבו סנאן</option>
+		
+		<option VALUE=1342>אבו קורינאת (יישוב)</option>
+		
+		<option VALUE=1375>אבו תלול</option>
+		
+		<option VALUE=652>אבטין</option>
+		
+		<option VALUE=1275>אבטליון</option>
+		
+		<option VALUE=679>אביאל</option>
+		
+		<option VALUE=1115>אביבים</option>
+		
+		<option VALUE=819>אביגדור</option>
+		
+		<option VALUE=175>אביחיל</option>
+		
+		<option VALUE=2052>אביטל</option>
+		
+		<option VALUE=1070>אביעזר</option>
+		
+		<option VALUE=1220>אבירים</option>
+		
+		<option VALUE=182>אבן יהודה</option>
+		
+		<option VALUE=1081>אבן מנחם</option>
+		
+		<option VALUE=783>אבן ספיר</option>
+		
+		<option VALUE=400>אבן שמואל</option>
+		
+		<option VALUE=4011>אבני איתן</option>
+		
+		<option VALUE=3793>אבני חפץ</option>
+		
+		<option VALUE=3786>אבנת</option>
+		
+		<option VALUE=1311>אבשלום</option>
+		
+		<option VALUE=3759>אדורה</option>
+		
+		<option VALUE=113>אדירים</option>
+		
+		<option VALUE=1068>אדמית</option>
+		
+		<option VALUE=1123>אדרת</option>
+		
+		<option VALUE=446>אודים</option>
+		
+		<option VALUE=4010>אודם</option>
+		
+		<option VALUE=1046>אוהד</option>
+		
+		<option VALUE=2710>אום אל-פחם</option>
+		
+		<option VALUE=2024>אום אל-קוטוף</option>
+		
+		<option VALUE=1358>אום בטין</option>
+		
+		<option VALUE=1108>אומן</option>
+		
+		<option VALUE=680>אומץ</option>
+		
+		<option VALUE=31>אופקים</option>
+		
+		<option VALUE=1294>אור הגנוז</option>
+		
+		<option VALUE=67>אור הנר</option>
+		
+		<option VALUE=2400>אור יהודה</option>
+		
+		<option VALUE=1020>אור עקיבא</option>
+		
+		<option VALUE=780>אורה</option>
+		
+		<option VALUE=2012>אורות</option>
+		
+		<option VALUE=4013>אורטל</option>
+		
+		<option VALUE=403>אורים</option>
+		
+		<option VALUE=882>אורנים</option>
+		
+		<option VALUE=3760>אורנית</option>
+		
+		<option VALUE=278>אושה</option>
+		
+		<option VALUE=565>אזור</option>
+		
+		<option VALUE=1157>אחווה</option>
+		
+		<option VALUE=821>אחוזם</option>
+		
+		<option VALUE=1330>אחוזת ברק</option>
+		
+		<option VALUE=785>אחיהוד</option>
+		
+		<option VALUE=850>אחיטוב</option>
+		
+		<option VALUE=804>אחיסמך</option>
+		
+		<option VALUE=797>אחיעזר</option>
+		
+		<option VALUE=338>איבים</option>
+		
+		<option VALUE=716>אייל</option>
+		
+		<option VALUE=77>איילת השחר</option>
+		
+		<option VALUE=294>אילון</option>
+		
+		<option VALUE=1126>אילות</option>
+		
+		<option VALUE=49>אילנייה</option>
+		
+		<option VALUE=2600>אילת</option>
+		
+		<option VALUE=1336>אירוס</option>
+		
+		<option VALUE=3762>איתמר</option>
+		
+		<option VALUE=37>איתן</option>
+		
+		<option VALUE=886>איתנים</option>
+		
+		<option VALUE=478>אכסאל</option>
+		
+		<option VALUE=1339>אל -עזי</option>
+		
+		<option VALUE=1316>אל -עריאן</option>
+		
+		<option VALUE=4003>אל -רום</option>
+		
+		<option VALUE=1359>אל סייד</option>
+		
+		<option VALUE=1145>אלומה</option>
+		
+		<option VALUE=330>אלומות</option>
+		
+		<option VALUE=1182>אלון הגליל</option>
+		
+		<option VALUE=3579>אלון מורה</option>
+		
+		<option VALUE=3604>אלון שבות</option>
+		
+		<option VALUE=429>אלוני אבא</option>
+		
+		<option VALUE=4017>אלוני הבשן</option>
+		
+		<option VALUE=868>אלוני יצחק</option>
+		
+		<option VALUE=285>אלונים</option>
+		
+		<option VALUE=4002>אלי-עד</option>
+		
+		<option VALUE=1365>אליאב</option>
+		
+		<option VALUE=41>אליכין</option>
+		
+		<option VALUE=1248>אליפז</option>
+		
+		<option VALUE=730>אליפלט</option>
+		
+		<option VALUE=682>אליקים</option>
+		
+		<option VALUE=204>אלישיב</option>
+		
+		<option VALUE=841>אלישמע</option>
+		
+		<option VALUE=1125>אלמגור</option>
+		
+		<option VALUE=3556>אלמוג</option>
+		
+		<option VALUE=1309>אלעד</option>
+		
+		<option VALUE=3618>אלעזר</option>
+		
+		<option VALUE=3750>אלפי מנשה</option>
+		
+		<option VALUE=603>אלקוש</option>
+		
+		<option VALUE=3560>אלקנה</option>
+		
+		<option VALUE=772>אמונים</option>
+		
+		<option VALUE=1064>אמירים</option>
+		
+		<option VALUE=1253>אמנון</option>
+		
+		<option VALUE=23>אמציה</option>
+		
+		<option VALUE=4012>אניעם</option>
+		
+		<option VALUE=3754>אספר</option>
+		
+		<option VALUE=529>אעבלין</option>
+		
+		<option VALUE=4301>אפיק</option>
+		
+		<option VALUE=176>אפיקים</option>
+		
+		<option VALUE=313>אפק</option>
+		
+		<option VALUE=3650>אפרת</option>
+		
+		<option VALUE=701>ארבל</option>
+		
+		<option VALUE=3598>ארגמן</option>
+		
+		<option VALUE=714>ארז</option>
+		
+		<option VALUE=3570>אריאל</option>
+		
+		<option VALUE=1324>ארסוף</option>
+		
+		<option VALUE=71>אשבול</option>
+		
+		<option VALUE=1276>אשבל</option>
+		
+		<option VALUE=70>אשדוד</option>
+		
+		<option VALUE=199>אשדות יעקב (איחוד)</option>
+		
+		<option VALUE=188>אשדות יעקב (מאוחד)</option>
+		
+		<option VALUE=1188>אשחר</option>
+		
+		<option VALUE=3722>אשכולות</option>
+		
+		<option VALUE=2021>אשל הנשיא</option>
+		
+		<option VALUE=1152>אשלים</option>
+		
+		<option VALUE=7100>אשקלון</option>
+		
+		<option VALUE=1256>אשרת</option>
+		
+		<option VALUE=740>אשתאול</option>
+		
+		<option VALUE=6000>באקה אל-גרביה</option>
+		
+		<option VALUE=21>באר אורה</option>
+		
+		<option VALUE=1376>באר גנים</option>
+		
+		<option VALUE=155>באר טוביה</option>
+		
+		<option VALUE=2530>באר יעקב</option>
+		
+		<option VALUE=1278>באר מילכה</option>
+		
+		<option VALUE=9000>באר שבע</option>
+		
+		<option VALUE=450>בארות יצחק</option>
+		
+		<option VALUE=697>בארותיים</option>
+		
+		<option VALUE=399>בארי</option>
+		
+		<option VALUE=559>בוסתן הגליל</option>
+		
+		<option VALUE=482>בועיינה-נוג'ידאת</option>
+		
+		<option VALUE=4001>בוקעאתא</option>
+		
+		<option VALUE=698>בורגתה</option>
+		
+		<option VALUE=2043>בחן</option>
+		
+		<option VALUE=762>בטחה</option>
+		
+		<option VALUE=234>ביצרון</option>
+		
+		<option VALUE=998>ביר אל-מכסור</option>
+		
+		<option VALUE=1348>ביר הדאג'</option>
+		
+		<option VALUE=368>בירייה</option>
+		
+		<option VALUE=317>בית אורן</option>
+		
+		<option VALUE=3574>בית אל</option>
+		
+		<option VALUE=562>בית אלעזרי</option>
+		
+		<option VALUE=95>בית אלפא</option>
+		
+		<option VALUE=3652>בית אריה</option>
+		
+		<option VALUE=1076>בית ברל</option>
+		
+		<option VALUE=480>בית ג'ן</option>
+		
+		<option VALUE=619>בית גוברין</option>
+		
+		<option VALUE=571>בית גמליאל</option>
+		
+		<option VALUE=466>בית דגן</option>
+		
+		<option VALUE=723>בית הגדי</option>
+		
+		<option VALUE=373>בית הלוי</option>
+		
+		<option VALUE=322>בית הלל</option>
+		
+		<option VALUE=572>בית העמק</option>
+		
+		<option VALUE=3645>בית הערבה</option>
+		
+		<option VALUE=242>בית השיטה</option>
+		
+		<option VALUE=353>בית זיד</option>
+		
+		<option VALUE=710>בית זית</option>
+		
+		<option VALUE=143>בית זרע</option>
+		
+		<option VALUE=3575>בית חורון</option>
+		
+		<option VALUE=877>בית חירות</option>
+		
+		<option VALUE=2033>בית חלקיה</option>
+		
+		<option VALUE=159>בית חנן</option>
+		
+		<option VALUE=800>בית חנניה</option>
+		
+		<option VALUE=1050>בית חשמונאי</option>
+		
+		<option VALUE=288>בית יהושע</option>
+		
+		<option VALUE=265>בית יוסף</option>
+		
+		<option VALUE=200>בית ינאי</option>
+		
+		<option VALUE=326>בית יצחק-שער חפר</option>
+		
+		<option VALUE=430>בית לחם הגלילית</option>
+		
+		<option VALUE=751>בית מאיר</option>
+		
+		<option VALUE=784>בית נחמיה</option>
+		
+		<option VALUE=16>בית ניר</option>
+		
+		<option VALUE=672>בית נקופה</option>
+		
+		<option VALUE=202>בית עובד</option>
+		
+		<option VALUE=301>בית עוזיאל</option>
+		
+		<option VALUE=756>בית עזרא</option>
+		
+		<option VALUE=604>בית עריף</option>
+		
+		<option VALUE=212>בית צבי</option>
+		
+		<option VALUE=598>בית קמה</option>
+		
+		<option VALUE=365>בית קשת</option>
+		
+		<option VALUE=848>בית רבן</option>
+		
+		<option VALUE=1162>בית רימון</option>
+		
+		<option VALUE=9200>בית שאן</option>
+		
+		<option VALUE=2610>בית שמש</option>
+		
+		<option VALUE=248>בית שערים</option>
+		
+		<option VALUE=747>בית שקמה</option>
+		
+		<option VALUE=252>ביתן אהרן</option>
+		
+		<option VALUE=3780>ביתר עילית</option>
+		
+		<option VALUE=94>בלפוריה</option>
+		
+		<option VALUE=760>בן זכאי</option>
+		
+		<option VALUE=712>בן עמי</option>
+		
+		<option VALUE=1084>בן שמן (כפר נוער)</option>
+		
+		<option VALUE=2013>בן שמן (מושב)</option>
+		
+		<option VALUE=6100>בני ברק</option>
+		
+		<option VALUE=1368>בני דקלים</option>
+		
+		<option VALUE=592>בני דרום</option>
+		
+		<option VALUE=386>בני דרור</option>
+		
+		<option VALUE=4015>בני יהודה</option>
+		
+		<option VALUE=1363>בני נצרים</option>
+		
+		<option VALUE=448>בני עטרות</option>
+		
+		<option VALUE=1066>בני עי"ש</option>
+		
+		<option VALUE=418>בני ציון</option>
+		
+		<option VALUE=588>בני ראם</option>
+		
+		<option VALUE=685>בניה</option>
+		
+		<option VALUE=9800>בנימינה-גבעת עדה*</option>
+		
+		<option VALUE=1326>בסמ"ה</option>
+		
+		<option VALUE=944>בסמת טבעון</option>
+		
+		<option VALUE=483>בענה</option>
+		
+		<option VALUE=389>בצרה</option>
+		
+		<option VALUE=589>בצת</option>
+		
+		<option VALUE=864>בקוע</option>
+		
+		<option VALUE=3612>בקעות</option>
+		
+		<option VALUE=823>בר גיורא</option>
+		
+		<option VALUE=1191>בר יוחאי</option>
+		
+		<option VALUE=3744>ברוכין</option>
+		
+		<option VALUE=428>ברור חיל</option>
+		
+		<option VALUE=2060>ברוש</option>
+		
+		<option VALUE=3710>ברכה</option>
+		
+		<option VALUE=746>ברכיה</option>
+		
+		<option VALUE=667>ברעם</option>
+		
+		<option VALUE=141>ברק</option>
+		
+		<option VALUE=617>ברקאי</option>
+		
+		<option VALUE=3654>ברקן</option>
+		
+		<option VALUE=2038>ברקת</option>
+		
+		<option VALUE=1323>בת הדר</option>
+		
+		<option VALUE=1361>בת חן</option>
+		
+		<option VALUE=1319>בת חפר</option>
+		
+		<option VALUE=6200>בת ים</option>
+		
+		<option VALUE=3794>בת עין</option>
+		
+		<option VALUE=33>בת שלמה</option>
+		
+		<option VALUE=1292>ג'דיידה-מכר</option>
+		
+		<option VALUE=485>ג'ולס</option>
+		
+		<option VALUE=627>ג'לג'וליה</option>
+		
+		<option VALUE=541>ג'סר א-זרקא</option>
+		
+		<option VALUE=487>ג'ש (גוש חלב)</option>
+		
+		<option VALUE=628>ג'ת</option>
+		
+		<option VALUE=872>גאולי תימן</option>
+		
+		<option VALUE=379>גאולים</option>
+		
+		<option VALUE=853>גאליה</option>
+		
+		<option VALUE=352>גבולות</option>
+		
+		<option VALUE=424>גבים</option>
+		
+		<option VALUE=86>גבע</option>
+		
+		<option VALUE=3763>גבע בנימין</option>
+		
+		<option VALUE=683>גבע כרמל</option>
+		
+		<option VALUE=2014>גבעולים</option>
+		
+		<option VALUE=3644>גבעון החדשה</option>
+		
+		<option VALUE=1344>גבעות בר</option>
+		
+		<option VALUE=1293>גבעת אבני</option>
+		
+		<option VALUE=1288>גבעת אלה</option>
+		
+		<option VALUE=147>גבעת ברנר</option>
+		
+		<option VALUE=870>גבעת השלושה</option>
+		
+		<option VALUE=3730>גבעת זאב</option>
+		
+		<option VALUE=207>גבעת ח"ן</option>
+		
+		<option VALUE=2018>גבעת חיים (איחוד)</option>
+		
+		<option VALUE=173>גבעת חיים (מאוחד)</option>
+		
+		<option VALUE=4021>גבעת יואב</option>
+		
+		<option VALUE=787>גבעת יערים</option>
+		
+		<option VALUE=919>גבעת ישעיהו</option>
+		
+		<option VALUE=802>גבעת כ"ח</option>
+		
+		<option VALUE=360>גבעת ניל"י</option>
+		
+		<option VALUE=703>גבעת עוז</option>
+		
+		<option VALUE=681>גבעת שמואל</option>
+		
+		<option VALUE=566>גבעת שמש</option>
+		
+		<option VALUE=1077>גבעת שפירא</option>
+		
+		<option VALUE=793>גבעתי</option>
+		
+		<option VALUE=6300>גבעתיים</option>
+		
+		<option VALUE=342>גברעם</option>
+		
+		<option VALUE=133>גבת</option>
+		
+		<option VALUE=35>גדות</option>
+		
+		<option VALUE=145>גדיש</option>
+		
+		<option VALUE=442>גדעונה</option>
+		
+		<option VALUE=2550>גדרה</option>
+		
+		<option VALUE=852>גונן</option>
+		
+		<option VALUE=755>גורן</option>
+		
+		<option VALUE=1219>גורנות הגליל</option>
+		
+		<option VALUE=457>גזית</option>
+		
+		<option VALUE=370>גזר</option>
+		
+		<option VALUE=706>גיאה</option>
+		
+		<option VALUE=196>גיבתון</option>
+		
+		<option VALUE=1043>גיזו</option>
+		
+		<option VALUE=1204>גילון</option>
+		
+		<option VALUE=736>גילת</option>
+		
+		<option VALUE=262>גינוסר</option>
+		
+		<option VALUE=92>גיניגר</option>
+		
+		<option VALUE=863>גינתון</option>
+		
+		<option VALUE=1206>גיתה</option>
+		
+		<option VALUE=3613>גיתית</option>
+		
+		<option VALUE=393>גלאון</option>
+		
+		<option VALUE=3606>גלגל</option>
+		
+		<option VALUE=346>גליל ים</option>
+		
+		<option VALUE=369>גלעד (אבן יצחק)</option>
+		
+		<option VALUE=745>גמזו</option>
+		
+		<option VALUE=1072>גן הדרום</option>
+		
+		<option VALUE=225>גן השומרון</option>
+		
+		<option VALUE=239>גן חיים</option>
+		
+		<option VALUE=734>גן יאשיה</option>
+		
+		<option VALUE=166>גן יבנה</option>
+		
+		<option VALUE=1274>גן נר</option>
+		
+		<option VALUE=311>גן שורק</option>
+		
+		<option VALUE=144>גן שלמה</option>
+		
+		<option VALUE=72>גן שמואל</option>
+		
+		<option VALUE=836>גנות</option>
+		
+		<option VALUE=549>גנות הדר</option>
+		
+		<option VALUE=1103>גני הדר</option>
+		
+		<option VALUE=1371>גני טל</option>
+		
+		<option VALUE=862>גני יוחנן</option>
+		
+		<option VALUE=3823>גני מודיעין</option>
+		
+		<option VALUE=218>גני עם</option>
+		
+		<option VALUE=229>גני תקווה</option>
+		
+		<option VALUE=842>געש</option>
+		
+		<option VALUE=463>געתון</option>
+		
+		<option VALUE=39>גפן</option>
+		
+		<option VALUE=1129>גרופית</option>
+		
+		<option VALUE=4022>גשור</option>
+		
+		<option VALUE=305>גשר</option>
+		
+		<option VALUE=574>גשר הזיו</option>
+		
+		<option VALUE=340>גת (קיבוץ)</option>
+		
+		<option VALUE=128>גת רימון</option>
+		
+		<option VALUE=494>דאלית אל-כרמל</option>
+		
+		<option VALUE=146>דבורה</option>
+		
+		<option VALUE=489>דבורייה</option>
+		
+		<option VALUE=849>דבירה</option>
+		
+		<option VALUE=407>דברת</option>
+		
+		<option VALUE=62>דגניה א'</option>
+		
+		<option VALUE=79>דגניה ב'</option>
+		
+		<option VALUE=1067>דוב"ב</option>
+		
+		<option VALUE=3747>דולב</option>
+		
+		<option VALUE=738>דור</option>
+		
+		<option VALUE=336>דורות</option>
+		
+		<option VALUE=475>דחי</option>
+		
+		<option VALUE=490>דייר אל-אסד</option>
+		
+		<option VALUE=492>דייר חנא</option>
+		
+		<option VALUE=493>דייר ראפאת</option>
+		
+		<option VALUE=2200>דימונה</option>
+		
+		<option VALUE=2063>דישון</option>
+		
+		<option VALUE=300>דלייה</option>
+		
+		<option VALUE=431>דלתון</option>
+		
+		<option VALUE=1317>דמיידה</option>
+		
+		<option VALUE=303>דן</option>
+		
+		<option VALUE=302>דפנה</option>
+		
+		<option VALUE=1241>דקל</option>
+		
+		<option VALUE=1349>דריג'את</option>
+		
+		<option VALUE=702>האון</option>
+		
+		<option VALUE=675>הבונים</option>
+		
+		<option VALUE=356>הגושרים</option>
+		
+		<option VALUE=191>הדר עם</option>
+		
+		<option VALUE=9700>הוד השרון</option>
+		
+		<option VALUE=1322>הודיות</option>
+		
+		<option VALUE=726>הודייה</option>
+		
+		<option VALUE=1186>הושעיה</option>
+		
+		<option VALUE=250>הזורע</option>
+		
+		<option VALUE=307>הזורעים</option>
+		
+		<option VALUE=434>החותרים</option>
+		
+		<option VALUE=684>היוגב</option>
+		
+		<option VALUE=1208>הילה</option>
+		
+		<option VALUE=377>המעפיל</option>
+		
+		<option VALUE=677>הסוללים</option>
+		
+		<option VALUE=423>העוגן</option>
+		
+		<option VALUE=3769>הר אדר</option>
+		
+		<option VALUE=3603>הר גילה</option>
+		
+		<option VALUE=1261>הר עמשא</option>
+		
+		<option VALUE=464>הראל</option>
+		
+		<option VALUE=1249>הרדוף</option>
+		
+		<option VALUE=6400>הרצלייה</option>
+		
+		<option VALUE=1203>הררית</option>
+		
+		<option VALUE=3639>ורד יריחו</option>
+		
+		<option VALUE=1133>ורדון</option>
+		
+		<option VALUE=815>זבדיאל</option>
+		
+		<option VALUE=44>זוהר</option>
+		
+		<option VALUE=584>זיקים</option>
+		
+		<option VALUE=788>זיתן</option>
+		
+		<option VALUE=9300>זכרון יעקב</option>
+		
+		<option VALUE=799>זכריה</option>
+		
+		<option VALUE=1290>זמר</option>
+		
+		<option VALUE=1065>זמרת</option>
+		
+		<option VALUE=816>זנוח</option>
+		
+		<option VALUE=2064>זרועה</option>
+		
+		<option VALUE=975>זרזיר</option>
+		
+		<option VALUE=818>זרחיה</option>
+		
+		<option VALUE=1321>ח'ואלד</option>
+		
+		<option VALUE=235>חבצלת השרון</option>
+		
+		<option VALUE=1110>חבר</option>
+		
+		<option VALUE=717>חגור</option>
+		
+		<option VALUE=3764>חגי</option>
+		
+		<option VALUE=205>חגלה</option>
+		
+		<option VALUE=4026>חד-נס</option>
+		
+		<option VALUE=618>חדיד</option>
+		
+		<option VALUE=6500>חדרה</option>
+		
+		<option VALUE=160>חולדה</option>
+		
+		<option VALUE=6600>חולון</option>
+		
+		<option VALUE=1239>חולית</option>
+		
+		<option VALUE=253>חולתה</option>
+		
+		<option VALUE=662>חוסן</option>
+		
+		<option VALUE=1332>חוסנייה</option>
+		
+		<option VALUE=115>חופית</option>
+		
+		<option VALUE=374>חוקוק</option>
+		
+		<option VALUE=1303>חורה</option>
+		
+		<option VALUE=496>חורפיש</option>
+		
+		<option VALUE=355>חורשים</option>
+		
+		<option VALUE=1047>חזון</option>
+		
+		<option VALUE=219>חיבת ציון</option>
+		
+		<option VALUE=3643>חיננית</option>
+		
+		<option VALUE=4000>חיפה</option>
+		
+		<option VALUE=162>חירות</option>
+		
+		<option VALUE=1272>חלוץ</option>
+		
+		<option VALUE=3573>חלמיש</option>
+		
+		<option VALUE=820>חלץ</option>
+		
+		<option VALUE=993>חמאם</option>
+		
+		<option VALUE=801>חמד</option>
+		
+		<option VALUE=343>חמדיה</option>
+		
+		<option VALUE=3646>חמדת</option>
+		
+		<option VALUE=3609>חמרה</option>
+		
+		<option VALUE=807>חניאל</option>
+		
+		<option VALUE=280>חניתה</option>
+		
+		<option VALUE=1257>חנתון</option>
+		
+		<option VALUE=4005>חספין</option>
+		
+		<option VALUE=363>חפץ חיים</option>
+		
+		<option VALUE=90>חפצי-בה</option>
+		
+		<option VALUE=700>חצב</option>
+		
+		<option VALUE=13>חצבה</option>
+		
+		<option VALUE=2034>חצור הגלילית</option>
+		
+		<option VALUE=406>חצור-אשדוד</option>
+		
+		<option VALUE=397>חצרים</option>
+		
+		<option VALUE=422>חרב לאת</option>
+		
+		<option VALUE=1024>חרוצים</option>
+		
+		<option VALUE=1247>חריש</option>
+		
+		<option VALUE=3717>חרמש</option>
+		
+		<option VALUE=1209>חרשים</option>
+		
+		<option VALUE=3770>חשמונאים</option>
+		
+		<option VALUE=6700>טבריה</option>
+		
+		<option VALUE=962>טובא-זנגרייה</option>
+		
+		<option VALUE=498>טורעאן</option>
+		
+		<option VALUE=2730>טייבה</option>
+		
+		<option VALUE=497>טייבה (בעמק)</option>
+		
+		<option VALUE=2720>טירה</option>
+		
+		<option VALUE=663>טירת יהודה</option>
+		
+		<option VALUE=2100>טירת כרמל</option>
+		
+		<option VALUE=268>טירת צבי</option>
+		
+		<option VALUE=462>טל שחר</option>
+		
+		<option VALUE=1181>טל-אל</option>
+		
+		<option VALUE=1177>טללים</option>
+		
+		<option VALUE=3788>טלמון</option>
+		
+		<option VALUE=8900>טמרה</option>
+		
+		<option VALUE=547>טמרה (יזרעאל)</option>
+		
+		<option VALUE=3743>טנא</option>
+		
+		<option VALUE=1214>טפחות</option>
+		
+		<option VALUE=1295>יאנוח-ג'ת</option>
+		
+		<option VALUE=1232>יבול</option>
+		
+		<option VALUE=46>יבנאל</option>
+		
+		<option VALUE=2660>יבנה</option>
+		
+		<option VALUE=96>יגור</option>
+		
+		<option VALUE=798>יגל</option>
+		
+		<option VALUE=577>יד בנימין</option>
+		
+		<option VALUE=1134>יד השמונה</option>
+		
+		<option VALUE=758>יד חנה</option>
+		
+		<option VALUE=358>יד מרדכי</option>
+		
+		<option VALUE=775>יד נתן</option>
+		
+		<option VALUE=64>יד רמב"ם</option>
+		
+		<option VALUE=1144>ידידה</option>
+		
+		<option VALUE=9400>יהוד</option>
+		
+		<option VALUE=1158>יהל</option>
+		
+		<option VALUE=2009>יובל</option>
+		
+		<option VALUE=1226>יובלים</option>
+		
+		<option VALUE=1112>יודפת</option>
+		
+		<option VALUE=4007>יונתן</option>
+		
+		<option VALUE=803>יושיביה</option>
+		
+		<option VALUE=452>יזרעאל</option>
+		
+		<option VALUE=409>יחיעם</option>
+		
+		<option VALUE=866>יטבתה</option>
+		
+		<option VALUE=3607>ייט"ב</option>
+		
+		<option VALUE=811>יכיני</option>
+		
+		<option VALUE=753>ינוב</option>
+		
+		<option VALUE=2011>ינון</option>
+		
+		<option VALUE=29>יסוד המעלה</option>
+		
+		<option VALUE=440>יסודות</option>
+		
+		<option VALUE=575>יסעור</option>
+		
+		<option VALUE=1138>יעד</option>
+		
+		<option VALUE=1044>יעף</option>
+		
+		<option VALUE=795>יערה</option>
+		
+		<option VALUE=499>יפיע</option>
+		
+		<option VALUE=3566>יפית</option>
+		
+		<option VALUE=134>יפעת</option>
+		
+		<option VALUE=453>יפתח</option>
+		
+		<option VALUE=3749>יצהר</option>
+		
+		<option VALUE=759>יציץ</option>
+		
+		<option VALUE=417>יקום</option>
+		
+		<option VALUE=3647>יקיר</option>
+		
+		<option VALUE=241>יקנעם (מושבה)</option>
+		
+		<option VALUE=240>יקנעם עילית</option>
+		
+		<option VALUE=623>יראון</option>
+		
+		<option VALUE=2026>ירדנה</option>
+		
+		<option VALUE=831>ירוחם</option>
+		
+		<option VALUE=3000>ירושלים</option>
+		
+		<option VALUE=718>ירחיב</option>
+		
+		<option VALUE=502>ירכא</option>
+		
+		<option VALUE=183>ירקונה</option>
+		
+		<option VALUE=916>ישע</option>
+		
+		<option VALUE=805>ישעי</option>
+		
+		<option VALUE=828>ישרש</option>
+		
+		<option VALUE=1227>יתד</option>
+		
+		<option VALUE=504>כאבול</option>
+		
+		<option VALUE=505>כאוכב אבו אל-היג'א</option>
+		
+		<option VALUE=576>כברי</option>
+		
+		<option VALUE=371>כדורי</option>
+		
+		<option VALUE=1338>כדיתה</option>
+		
+		<option VALUE=3564>כוכב השחר</option>
+		
+		<option VALUE=1224>כוכב יאיר</option>
+		
+		<option VALUE=3779>כוכב יעקב</option>
+		
+		<option VALUE=824>כוכב מיכאל</option>
+		
+		<option VALUE=1252>כורזים</option>
+		
+		<option VALUE=1210>כחל</option>
+		
+		<option VALUE=1367>כחלה</option>
+		
+		<option VALUE=840>כיסופים</option>
+		
+		<option VALUE=1153>כישור</option>
+		
+		<option VALUE=1183>כליל</option>
+		
+		<option VALUE=1229>כלנית</option>
+		
+		<option VALUE=1331>כמאנה</option>
+		
+		<option VALUE=1291>כמהין</option>
+		
+		<option VALUE=1201>כמון</option>
+		
+		<option VALUE=2006>כנות</option>
+		
+		<option VALUE=4028>כנף</option>
+		
+		<option VALUE=63>כנרת (מושבה)</option>
+		
+		<option VALUE=57>כנרת (קבוצה)</option>
+		
+		<option VALUE=1059>כסיפה</option>
+		
+		<option VALUE=859>כסלון</option>
+		
+		<option VALUE=1296>כסרא-סמיע</option>
+		
+		<option VALUE=978>כעביה-טבאש-חג'אג'רה</option>
+		
+		<option VALUE=857>כפר אביב</option>
+		
+		<option VALUE=3638>כפר אדומים</option>
+		
+		<option VALUE=364>כפר אוריה</option>
+		
+		<option VALUE=690>כפר אחים</option>
+		
+		<option VALUE=220>כפר ביאליק</option>
+		
+		<option VALUE=177>כפר ביל"ו</option>
+		
+		<option VALUE=357>כפר בלום</option>
+		
+		<option VALUE=2010>כפר בן נון</option>
+		
+		<option VALUE=633>כפר ברא</option>
+		
+		<option VALUE=132>כפר ברוך</option>
+		
+		<option VALUE=106>כפר גדעון</option>
+		
+		<option VALUE=427>כפר גלים</option>
+		
+		<option VALUE=310>כפר גליקסון</option>
+		
+		<option VALUE=76>כפר גלעדי</option>
+		
+		<option VALUE=707>כפר דניאל</option>
+		
+		<option VALUE=3796>כפר האורנים</option>
+		
+		<option VALUE=192>כפר החורש</option>
+		
+		<option VALUE=254>כפר המכבי</option>
+		
+		<option VALUE=582>כפר הנגיד</option>
+		
+		<option VALUE=890>כפר הנוער הדתי</option>
+		
+		<option VALUE=443>כפר הנשיא</option>
+		
+		<option VALUE=187>כפר הס</option>
+		
+		<option VALUE=217>כפר הרא"ה</option>
+		
+		<option VALUE=888>כפר הרי"ף</option>
+		
+		<option VALUE=190>כפר ויתקין</option>
+		
+		<option VALUE=320>כפר ורבורג</option>
+		
+		<option VALUE=1263>כפר ורדים</option>
+		
+		<option VALUE=1325>כפר זוהרים</option>
+		
+		<option VALUE=786>כפר זיתים</option>
+		
+		<option VALUE=696>כפר חב"ד</option>
+		
+		<option VALUE=609>כפר חושן</option>
+		
+		<option VALUE=255>כפר חיטים</option>
+		
+		<option VALUE=193>כפר חיים</option>
+		
+		<option VALUE=1297>כפר חנניה</option>
+		
+		<option VALUE=112>כפר חסידים א'</option>
+		
+		<option VALUE=889>כפר חסידים ב'</option>
+		
+		<option VALUE=4004>כפר חרוב</option>
+		
+		<option VALUE=673>כפר טרומן</option>
+		
+		<option VALUE=507>כפר יאסיף</option>
+		
+		<option VALUE=233>כפר ידידיה</option>
+		
+		<option VALUE=140>כפר יהושע</option>
+		
+		<option VALUE=168>כפר יונה</option>
+		
+		<option VALUE=85>כפר יחזקאל</option>
+		
+		<option VALUE=170>כפר יעבץ</option>
+		
+		<option VALUE=508>כפר כמא</option>
+		
+		<option VALUE=509>כפר כנא</option>
+		
+		<option VALUE=387>כפר מונש</option>
+		
+		<option VALUE=1095>כפר מימון</option>
+		
+		<option VALUE=98>כפר מל"ל</option>
+		
+		<option VALUE=510>כפר מנדא</option>
+		
+		<option VALUE=274>כפר מנחם</option>
+		
+		<option VALUE=297>כפר מסריק</option>
+		
+		<option VALUE=512>כפר מצר</option>
+		
+		<option VALUE=764>כפר מרדכי</option>
+		
+		<option VALUE=316>כפר נטר</option>
+		
+		<option VALUE=345>כפר סאלד</option>
+		
+		<option VALUE=6900>כפר סבא</option>
+		
+		<option VALUE=107>כפר סילבר</option>
+		
+		<option VALUE=249>כפר סירקין</option>
+		
+		<option VALUE=875>כפר עבודה</option>
+		
+		<option VALUE=845>כפר עזה</option>
+		
+		<option VALUE=3488>כפר עציון</option>
+		
+		<option VALUE=189>כפר פינס</option>
+		
+		<option VALUE=634>כפר קאסם</option>
+		
+		<option VALUE=388>כפר קיש</option>
+		
+		<option VALUE=654>כפר קרע</option>
+		
+		<option VALUE=579>כפר ראש הנקרה</option>
+		
+		<option VALUE=1130>כפר רוזנואלד (זרעית)</option>
+		
+		<option VALUE=295>כפר רופין</option>
+		
+		<option VALUE=1166>כפר רות</option>
+		
+		<option VALUE=605>כפר שמאי</option>
+		
+		<option VALUE=743>כפר שמואל</option>
+		
+		<option VALUE=267>כפר שמריהו</option>
+		
+		<option VALUE=47>כפר תבור</option>
+		
+		<option VALUE=3572>כפר תפוח</option>
+		
+		<option VALUE=1285>כרכום</option>
+		
+		<option VALUE=664>כרם בן זמרה</option>
+		
+		<option VALUE=88>כרם בן שמן</option>
+		
+		<option VALUE=1094>כרם יבנה (ישיבה)</option>
+		
+		<option VALUE=580>כרם מהר"ל</option>
+		
+		<option VALUE=1085>כרם שלום</option>
+		
+		<option VALUE=1264>כרמי יוסף</option>
+		
+		<option VALUE=3766>כרמי צור</option>
+		
+		<option VALUE=1374>כרמי קטיף</option>
+		
+		<option VALUE=1139>כרמיאל</option>
+		
+		<option VALUE=768>כרמייה</option>
+		
+		<option VALUE=1198>כרמים</option>
+		
+		<option VALUE=3656>כרמל</option>
+		
+		<option VALUE=1207>לבון</option>
+		
+		<option VALUE=585>לביא</option>
+		
+		<option VALUE=1230>לבנים</option>
+		
+		<option VALUE=2023>להב</option>
+		
+		<option VALUE=380>להבות הבשן</option>
+		
+		<option VALUE=715>להבות חביבה</option>
+		
+		<option VALUE=1271>להבים</option>
+		
+		<option VALUE=7000>לוד</option>
+		
+		<option VALUE=52>לוזית</option>
+		
+		<option VALUE=595>לוחמי הגיטאות</option>
+		
+		<option VALUE=1171>לוטם</option>
+		
+		<option VALUE=1255>לוטן</option>
+		
+		<option VALUE=674>לימן</option>
+		
+		<option VALUE=24>לכיש</option>
+		
+		<option VALUE=1310>לפיד</option>
+		
+		<option VALUE=1173>לפידות</option>
+		
+		<option VALUE=1060>לקיה</option>
+		
+		<option VALUE=2055>מאור</option>
+		
+		<option VALUE=102>מאיר שפיה</option>
+		
+		<option VALUE=771>מבוא ביתר</option>
+		
+		<option VALUE=3569>מבוא דותן</option>
+		
+		<option VALUE=3709>מבוא חורון</option>
+		
+		<option VALUE=4204>מבוא חמה</option>
+		
+		<option VALUE=1141>מבוא מודיעים</option>
+		
+		<option VALUE=1318>מבואות ים</option>
+		
+		<option VALUE=1080>מבועים</option>
+		
+		<option VALUE=829>מבטחים</option>
+		
+		<option VALUE=573>מבקיעים</option>
+		
+		<option VALUE=1015>מבשרת ציון</option>
+		
+		<option VALUE=516>מג'ד אל-כרום</option>
+		
+		<option VALUE=4201>מג'דל שמס</option>
+		
+		<option VALUE=481>מגאר</option>
+		
+		<option VALUE=689>מגדים</option>
+		
+		<option VALUE=65>מגדל</option>
+		
+		<option VALUE=874>מגדל העמק</option>
+		
+		<option VALUE=3561>מגדל עוז</option>
+		
+		<option VALUE=3751>מגדלים</option>
+		
+		<option VALUE=586>מגידו</option>
+		
+		<option VALUE=375>מגל</option>
+		
+		<option VALUE=695>מגן</option>
+		
+		<option VALUE=1155>מגן שאול</option>
+		
+		<option VALUE=722>מגשימים</option>
+		
+		<option VALUE=2029>מדרך עוז</option>
+		
+		<option VALUE=1140>מדרשת בן גוריון</option>
+		
+		<option VALUE=897>מדרשת רופין</option>
+		
+		<option VALUE=3797>מודיעין עילית</option>
+		
+		<option VALUE=1200>מודיעין-מכבים-רעות*</option>
+		
+		<option VALUE=269>מולדת</option>
+		
+		<option VALUE=208>מוצא עילית</option>
+		
+		<option VALUE=635>מוקייבלה</option>
+		
+		<option VALUE=1163>מורן</option>
+		
+		<option VALUE=1178>מורשת</option>
+		
+		<option VALUE=606>מזור</option>
+		
+		<option VALUE=28>מזכרת בתיה</option>
+		
+		<option VALUE=104>מזרע</option>
+		
+		<option VALUE=517>מזרעה</option>
+		
+		<option VALUE=3599>מחולה</option>
+		
+		<option VALUE=1196>מחנה יתיר</option>
+		
+		<option VALUE=308>מחניים</option>
+		
+		<option VALUE=776>מחסיה</option>
+		
+		<option VALUE=43>מטולה</option>
+		
+		<option VALUE=822>מטע</option>
+		
+		<option VALUE=1128>מי עמי</option>
+		
+		<option VALUE=2054>מיטב</option>
+		
+		<option VALUE=649>מייסר</option>
+		
+		<option VALUE=4019>מיצר</option>
+		
+		<option VALUE=1282>מירב</option>
+		
+		<option VALUE=607>מירון</option>
+		
+		<option VALUE=731>מישר</option>
+		
+		<option VALUE=1268>מיתר</option>
+		
+		<option VALUE=3614>מכורה</option>
+		
+		<option VALUE=1343>מכחול</option>
+		
+		<option VALUE=382>מכמורת</option>
+		
+		<option VALUE=1202>מכמנים</option>
+		
+		<option VALUE=164>מלאה</option>
+		
+		<option VALUE=2044>מלילות</option>
+		
+		<option VALUE=596>מלכייה</option>
+		
+		<option VALUE=1154>מלכישוע</option>
+		
+		<option VALUE=2030>מנוחה</option>
+		
+		<option VALUE=1174>מנוף</option>
+		
+		<option VALUE=1205>מנות</option>
+		
+		<option VALUE=48>מנחמיה</option>
+		
+		<option VALUE=347>מנרה</option>
+		
+		<option VALUE=994>מנשית זבדה</option>
+		
+		<option VALUE=1258>מסד</option>
+		
+		<option VALUE=263>מסדה</option>
+		
+		<option VALUE=298>מסילות</option>
+		
+		<option VALUE=742>מסילת ציון</option>
+		
+		<option VALUE=748>מסלול</option>
+		
+		<option VALUE=4203>מסעדה</option>
+		
+		<option VALUE=197>מעברות</option>
+		
+		<option VALUE=1082>מעגלים</option>
+		
+		<option VALUE=678>מעגן</option>
+		
+		<option VALUE=694>מעגן מיכאל</option>
+		
+		<option VALUE=272>מעוז חיים</option>
+		
+		<option VALUE=3657>מעון</option>
+		
+		<option VALUE=570>מעונה</option>
+		
+		<option VALUE=416>מעיין ברוך</option>
+		
+		<option VALUE=290>מעיין צבי</option>
+		
+		<option VALUE=518>מעיליא</option>
+		
+		<option VALUE=3616>מעלה אדומים</option>
+		
+		<option VALUE=3608>מעלה אפרים</option>
+		
+		<option VALUE=1127>מעלה גלבוע</option>
+		
+		<option VALUE=4008>מעלה גמלא</option>
+		
+		<option VALUE=286>מעלה החמישה</option>
+		
+		<option VALUE=3752>מעלה לבונה</option>
+		
+		<option VALUE=3651>מעלה מכמש</option>
+		
+		<option VALUE=1327>מעלה עירון</option>
+		
+		<option VALUE=3653>מעלה עמוס</option>
+		
+		<option VALUE=3637>מעלה שומרון</option>
+		
+		<option VALUE=1063>מעלות-תרשיחא</option>
+		
+		<option VALUE=344>מענית</option>
+		
+		<option VALUE=230>מעש</option>
+		
+		<option VALUE=668>מפלסים</option>
+		
+		<option VALUE=3745>מצדות יהודה</option>
+		
+		<option VALUE=325>מצובה</option>
+		
+		<option VALUE=757>מצליח</option>
+		
+		<option VALUE=58>מצפה</option>
+		
+		<option VALUE=1222>מצפה אבי"ב</option>
+		
+		<option VALUE=1370>מצפה אילן</option>
+		
+		<option VALUE=3576>מצפה יריחו</option>
+		
+		<option VALUE=1190>מצפה נטופה</option>
+		
+		<option VALUE=99>מצפה רמון</option>
+		
+		<option VALUE=3610>מצפה שלם</option>
+		
+		<option VALUE=648>מצר</option>
+		
+		<option VALUE=22>מקווה ישראל</option>
+		
+		<option VALUE=843>מרגליות</option>
+		
+		<option VALUE=4101>מרום גולן</option>
+		
+		<option VALUE=1340>מרחב עם</option>
+		
+		<option VALUE=97>מרחביה (מושב)</option>
+		
+		<option VALUE=66>מרחביה (קיבוץ)</option>
+		
+		<option VALUE=1098>מרכז שפירא</option>
+		
+		<option VALUE=421>משאבי שדה</option>
+		
+		<option VALUE=765>משגב דב</option>
+		
+		<option VALUE=378>משגב עם</option>
+		
+		<option VALUE=520>משהד</option>
+		
+		<option VALUE=3605>משואה</option>
+		
+		<option VALUE=620>משואות יצחק</option>
+		
+		<option VALUE=3785>משכיות</option>
+		
+		<option VALUE=670>משמר איילון</option>
+		
+		<option VALUE=563>משמר דוד</option>
+		
+		<option VALUE=732>משמר הירדן</option>
+		
+		<option VALUE=395>משמר הנגב</option>
+		
+		<option VALUE=130>משמר העמק</option>
+		
+		<option VALUE=729>משמר השבעה</option>
+		
+		<option VALUE=194>משמר השרון</option>
+		
+		<option VALUE=213>משמרות</option>
+		
+		<option VALUE=425>משמרת</option>
+		
+		<option VALUE=791>משען</option>
+		
+		<option VALUE=1315>מתן</option>
+		
+		<option VALUE=1184>מתת</option>
+		
+		<option VALUE=3648>מתתיהו</option>
+		
+		<option VALUE=4551>נאות גולן</option>
+		
+		<option VALUE=1124>נאות הכיכר</option>
+		
+		<option VALUE=408>נאות מרדכי</option>
+		
+		<option VALUE=1197>נאות סמדר</option>
+		
+		<option VALUE=524>נאעורה</option>
+		
+		<option VALUE=396>נבטים</option>
+		
+		<option VALUE=315>נגבה</option>
+		
+		<option VALUE=3724>נגוהות</option>
+		
+		<option VALUE=309>נהורה</option>
+		
+		<option VALUE=80>נהלל</option>
+		
+		<option VALUE=9100>נהרייה</option>
+		
+		<option VALUE=4304>נוב</option>
+		
+		<option VALUE=55>נוגה</option>
+		
+		<option VALUE=1366>נווה</option>
+		
+		<option VALUE=926>נווה אבות</option>
+		
+		<option VALUE=590>נווה אור</option>
+		
+		<option VALUE=4303>נווה אטי"ב</option>
+		
+		<option VALUE=405>נווה אילן</option>
+		
+		<option VALUE=296>נווה איתן</option>
+		
+		<option VALUE=3725>נווה דניאל</option>
+		
+		<option VALUE=1057>נווה זוהר</option>
+		
+		<option VALUE=1314>נווה זיו</option>
+		
+		<option VALUE=1279>נווה חריף</option>
+		
+		<option VALUE=312>נווה ים</option>
+		
+		<option VALUE=686>נווה ימין</option>
+		
+		<option VALUE=858>נווה ירק</option>
+		
+		<option VALUE=827>נווה מבטח</option>
+		
+		<option VALUE=1071>נווה מיכאל</option>
+		
+		<option VALUE=1259>נווה שלום</option>
+		
+		<option VALUE=15>נועם</option>
+		
+		<option VALUE=1333>נוף איילון</option>
+		
+		<option VALUE=3790>נופים</option>
+		
+		<option VALUE=1284>נופית</option>
+		
+		<option VALUE=257>נופך</option>
+		
+		<option VALUE=3726>נוקדים</option>
+		
+		<option VALUE=447>נורדייה</option>
+		
+		<option VALUE=833>נורית</option>
+		
+		<option VALUE=59>נחושה</option>
+		
+		<option VALUE=844>נחל עוז</option>
+		
+		<option VALUE=2045>נחלה</option>
+		
+		<option VALUE=3767>נחליאל</option>
+		
+		<option VALUE=449>נחלים</option>
+		
+		<option VALUE=809>נחם</option>
+		
+		<option VALUE=522>נחף</option>
+		
+		<option VALUE=433>נחשולים</option>
+		
+		<option VALUE=777>נחשון</option>
+		
+		<option VALUE=705>נחשונים</option>
+		
+		<option VALUE=1147>נטועה</option>
+		
+		<option VALUE=4014>נטור</option>
+		
+		<option VALUE=1369>נטע</option>
+		
+		<option VALUE=174>נטעים</option>
+		
+		<option VALUE=1254>נטף</option>
+		
+		<option VALUE=523>ניין</option>
+		
+		<option VALUE=3655>ניל"י</option>
+		
+		<option VALUE=351>ניצן</option>
+		
+		<option VALUE=1419>ניצן ב'</option>
+		
+		<option VALUE=1195>ניצנה (קהילת חינוך)</option>
+		
+		<option VALUE=1280>ניצני סיני</option>
+		
+		<option VALUE=851>ניצני עוז</option>
+		
+		<option VALUE=359>ניצנים</option>
+		
+		<option VALUE=808>ניר אליהו</option>
+		
+		<option VALUE=553>ניר בנים</option>
+		
+		<option VALUE=720>ניר גלים</option>
+		
+		<option VALUE=256>ניר דוד (תל עמל)</option>
+		
+		<option VALUE=11>ניר ח"ן</option>
+		
+		<option VALUE=165>ניר יפה</option>
+		
+		<option VALUE=402>ניר יצחק</option>
+		
+		<option VALUE=699>ניר ישראל</option>
+		
+		<option VALUE=2047>ניר משה</option>
+		
+		<option VALUE=69>ניר עוז</option>
+		
+		<option VALUE=348>ניר עם</option>
+		
+		<option VALUE=769>ניר עציון</option>
+		
+		<option VALUE=2048>ניר עקיבא</option>
+		
+		<option VALUE=331>ניר צבי</option>
+		
+		<option VALUE=602>נירים</option>
+		
+		<option VALUE=1236>נירית</option>
+		
+		<option VALUE=3620>נירן</option>
+		
+		<option VALUE=825>נס הרים</option>
+		
+		<option VALUE=1143>נס עמים</option>
+		
+		<option VALUE=7200>נס ציונה</option>
+		
+		<option VALUE=186>נעורים</option>
+		
+		<option VALUE=3787>נעלה</option>
+		
+		<option VALUE=3713>נעמ"ה</option>
+		
+		<option VALUE=158>נען</option>
+		
+		<option VALUE=1372>נצר חזני</option>
+		
+		<option VALUE=435>נצר סרני</option>
+		
+		<option VALUE=7300>נצרת</option>
+		
+		<option VALUE=1061>נצרת עילית</option>
+		
+		<option VALUE=2500>נשר</option>
+		
+		<option VALUE=3555>נתיב הגדוד</option>
+		
+		<option VALUE=693>נתיב הל"ה</option>
+		
+		<option VALUE=1242>נתיב העשרה</option>
+		
+		<option VALUE=792>נתיב השיירה</option>
+		
+		<option VALUE=246>נתיבות</option>
+		
+		<option VALUE=7400>נתניה</option>
+		
+		<option VALUE=525>סאג'ור</option>
+		
+		<option VALUE=578>סאסא</option>
+		
+		<option VALUE=587>סביון*</option>
+		
+		<option VALUE=2046>סגולה</option>
+		
+		<option VALUE=942>סואעד (חמרייה)*</option>
+		
+		<option VALUE=526>סולם</option>
+		
+		<option VALUE=3756>סוסיה</option>
+		
+		<option VALUE=1238>סופה</option>
+		
+		<option VALUE=7500>סח'נין</option>
+		
+		<option VALUE=1245>סלמה</option>
+		
+		<option VALUE=3567>סלעית</option>
+		
+		<option VALUE=1156>סמר</option>
+		
+		<option VALUE=3777>סנסנה</option>
+		
+		<option VALUE=419>סעד</option>
+		
+		<option VALUE=1360>סעוה</option>
+		
+		<option VALUE=454>סער</option>
+		
+		<option VALUE=1176>ספיר</option>
+		
+		<option VALUE=610>סתרייה</option>
+		
+		<option VALUE=4501>ע'ג'ר</option>
+		
+		<option VALUE=892>עבדון</option>
+		
+		<option VALUE=376>עברון</option>
+		
+		<option VALUE=794>עגור</option>
+		
+		<option VALUE=1199>עדי</option>
+		
+		<option VALUE=2035>עדנים</option>
+		
+		<option VALUE=826>עוזה</option>
+		
+		<option VALUE=528>עוזייר</option>
+		
+		<option VALUE=737>עולש</option>
+		
+		<option VALUE=666>עומר</option>
+		
+		<option VALUE=810>עופר</option>
+		
+		<option VALUE=32>עוצם</option>
+		
+		<option VALUE=328>עזוז</option>
+		
+		<option VALUE=1149>עזר</option>
+		
+		<option VALUE=837>עזריאל</option>
+		
+		<option VALUE=711>עזריה</option>
+		
+		<option VALUE=817>עזריקם</option>
+		
+		<option VALUE=3658>עטרת</option>
+		
+		<option VALUE=1175>עידן</option>
+		
+		<option VALUE=530>עיילבון</option>
+		
+		<option VALUE=156>עיינות</option>
+		
+		<option VALUE=511>עילוט</option>
+		
+		<option VALUE=687>עין איילה</option>
+		
+		<option VALUE=546>עין אל-אסד</option>
+		
+		<option VALUE=273>עין גב</option>
+		
+		<option VALUE=2042>עין גדי</option>
+		
+		<option VALUE=436>עין דור</option>
+		
+		<option VALUE=1240>עין הבשור</option>
+		
+		<option VALUE=74>עין הוד</option>
+		
+		<option VALUE=167>עין החורש</option>
+		
+		<option VALUE=289>עין המפרץ</option>
+		
+		<option VALUE=383>עין הנצי"ב</option>
+		
+		<option VALUE=367>עין העמק</option>
+		
+		<option VALUE=270>עין השופט</option>
+		
+		<option VALUE=676>עין השלושה</option>
+		
+		<option VALUE=157>עין ורד</option>
+		
+		<option VALUE=4503>עין זיוון</option>
+		
+		<option VALUE=1320>עין חוד</option>
+		
+		<option VALUE=89>עין חרוד (איחוד)</option>
+		
+		<option VALUE=82>עין חרוד (מאוחד)</option>
+		
+		<option VALUE=806>עין יהב</option>
+		
+		<option VALUE=813>עין יעקב</option>
+		
+		<option VALUE=1056>עין כרם-בי"ס חקלאי</option>
+		
+		<option VALUE=426>עין כרמל</option>
+		
+		<option VALUE=532>עין מאהל</option>
+		
+		<option VALUE=521>עין נקובא</option>
+		
+		<option VALUE=223>עין עירון</option>
+		
+		<option VALUE=622>עין צורים</option>
+		
+		<option VALUE=4502>עין קנייא</option>
+		
+		<option VALUE=514>עין ראפה</option>
+		
+		<option VALUE=139>עין שמר</option>
+		
+		<option VALUE=880>עין שריד</option>
+		
+		<option VALUE=1251>עין תמר</option>
+		
+		<option VALUE=871>עינת</option>
+		
+		<option VALUE=7600>עכו</option>
+		
+		<option VALUE=1146>עלומים</option>
+		
+		<option VALUE=3765>עלי</option>
+		
+		<option VALUE=3727>עלי זהב</option>
+		
+		<option VALUE=688>עלמה</option>
+		
+		<option VALUE=3715>עלמון</option>
+		
+		<option VALUE=1212>עמוקה</option>
+		
+		<option VALUE=779>עמינדב</option>
+		
+		<option VALUE=385>עמיעד</option>
+		
+		<option VALUE=318>עמיעוז</option>
+		
+		<option VALUE=773>עמיקם</option>
+		
+		<option VALUE=319>עמיר</option>
+		
+		<option VALUE=3660>עמנואל</option>
+		
+		<option VALUE=708>עמקה</option>
+		
+		<option VALUE=3712>ענב</option>
+		
+		<option VALUE=534>עספיא</option>
+		
+		<option VALUE=7700>עפולה</option>
+		
+		<option VALUE=3617>עפרה</option>
+		
+		<option VALUE=3778>עץ אפרים</option>
+		
+		<option VALUE=917>עצמון שגב</option>
+		
+		<option VALUE=531>עראבה</option>
+		
+		<option VALUE=1246>עראמשה*</option>
+		
+		<option VALUE=1335>ערב אל נעים</option>
+		
+		<option VALUE=2560>ערד</option>
+		
+		<option VALUE=593>ערוגות</option>
+		
+		<option VALUE=637>ערערה</option>
+		
+		<option VALUE=1192>ערערה-בנגב</option>
+		
+		<option VALUE=591>עשרת</option>
+		
+		<option VALUE=53>עתלית</option>
+		
+		<option VALUE=3748>עתניאל</option>
+		
+		<option VALUE=1151>פארן</option>
+		
+		<option VALUE=3768>פדואל</option>
+		
+		<option VALUE=750>פדויים</option>
+		
+		<option VALUE=838>פדיה</option>
+		
+		<option VALUE=537>פוריידיס</option>
+		
+		<option VALUE=1104>פורייה - כפר עבודה</option>
+		
+		<option VALUE=1105>פורייה - נווה עובד</option>
+		
+		<option VALUE=1313>פורייה עילית</option>
+		
+		<option VALUE=767>פורת</option>
+		
+		<option VALUE=749>פטיש</option>
+		
+		<option VALUE=1185>פלך</option>
+		
+		<option VALUE=597>פלמחים</option>
+		
+		<option VALUE=3723>פני חבר</option>
+		
+		<option VALUE=3659>פסגות</option>
+		
+		<option VALUE=535>פסוטה</option>
+		
+		<option VALUE=2059>פעמי תש"ז</option>
+		
+		<option VALUE=3615>פצאל</option>
+		
+		<option VALUE=536>פקיעין (בוקייעה)</option>
+		
+		<option VALUE=281>פקיעין חדשה</option>
+		
+		<option VALUE=7800>פרדס חנה-כרכור</option>
+		
+		<option VALUE=171>פרדסייה</option>
+		
+		<option VALUE=599>פרוד</option>
+		
+		<option VALUE=2053>פרזון</option>
+		
+		<option VALUE=1231>פרי גן</option>
+		
+		<option VALUE=7900>פתח תקווה</option>
+		
+		<option VALUE=839>פתחיה</option>
+		
+		<option VALUE=413>צאלים</option>
+		
+		<option VALUE=1180>צביה</option>
+		
+		<option VALUE=1213>צבעון</option>
+		
+		<option VALUE=465>צובה</option>
+		
+		<option VALUE=1136>צוחר</option>
+		
+		<option VALUE=3791>צופים</option>
+		
+		<option VALUE=198>צופית</option>
+		
+		<option VALUE=1150>צופר</option>
+		
+		<option VALUE=1102>צוקי ים</option>
+		
+		<option VALUE=1262>צוקים</option>
+		
+		<option VALUE=1113>צור הדסה</option>
+		
+		<option VALUE=1345>צור יצחק</option>
+		
+		<option VALUE=276>צור משה</option>
+		
+		<option VALUE=1148>צור נתן</option>
+		
+		<option VALUE=774>צוריאל</option>
+		
+		<option VALUE=1221>צורית</option>
+		
+		<option VALUE=613>ציפורי</option>
+		
+		<option VALUE=796>צלפון</option>
+		
+		<option VALUE=636>צנדלה</option>
+		
+		<option VALUE=594>צפרייה</option>
+		
+		<option VALUE=1079>צפרירים</option>
+		
+		<option VALUE=8000>צפת</option>
+		
+		<option VALUE=612>צרופה</option>
+		
+		<option VALUE=567>צרעה</option>
+		
+		<option VALUE=334>קבוצת יבנה</option>
+		
+		<option VALUE=3557>קדומים</option>
+		
+		<option VALUE=195>קדימה-צורן</option>
+		
+		<option VALUE=392>קדמה</option>
+		
+		<option VALUE=4025>קדמת צבי</option>
+		
+		<option VALUE=3781>קדר</option>
+		
+		<option VALUE=615>קדרון</option>
+		
+		<option VALUE=1211>קדרים</option>
+		
+		<option VALUE=766>קוממיות</option>
+		
+		<option VALUE=1179>קורנית</option>
+		
+		<option VALUE=1052>קטורה</option>
+		
+		<option VALUE=1167>קיסריה</option>
+		
+		<option VALUE=414>קלחים</option>
+		
+		<option VALUE=3601>קליה</option>
+		
+		<option VALUE=638>קלנסווה</option>
+		
+		<option VALUE=4024>קלע</option>
+		
+		<option VALUE=1243>קציר</option>
+		
+		<option VALUE=1347>קצר א-סר</option>
+		
+		<option VALUE=4100>קצרין</option>
+		
+		<option VALUE=2620>קריית אונו</option>
+		
+		<option VALUE=3611>קריית ארבע</option>
+		
+		<option VALUE=6800>קריית אתא</option>
+		
+		<option VALUE=9500>קריית ביאליק</option>
+		
+		<option VALUE=2630>קריית גת</option>
+		
+		<option VALUE=2300>קריית טבעון</option>
+		
+		<option VALUE=9600>קריית ים</option>
+		
+		<option VALUE=1137>קריית יערים</option>
+		
+		<option VALUE=2039>קריית יערים (מוסד)</option>
+		
+		<option VALUE=8200>קריית מוצקין</option>
+		
+		<option VALUE=1034>קריית מלאכי</option>
+		
+		<option VALUE=3746>קריית נטפים</option>
+		
+		<option VALUE=78>קריית ענבים</option>
+		
+		<option VALUE=469>קריית עקרון</option>
+		
+		<option VALUE=412>קריית שלמה</option>
+		
+		<option VALUE=2800>קריית שמונה</option>
+		
+		<option VALUE=3640>קרני שומרון</option>
+		
+		<option VALUE=4006>קשת</option>
+		
+		<option VALUE=543>ראמה</option>
+		
+		<option VALUE=1334>ראס אל-עין</option>
+		
+		<option VALUE=990>ראס עלי</option>
+		
+		<option VALUE=2640>ראש העין</option>
+		
+		<option VALUE=26>ראש פינה</option>
+		
+		<option VALUE=3602>ראש צורים</option>
+		
+		<option VALUE=8300>ראשון לציון</option>
+		
+		<option VALUE=3795>רבבה</option>
+		
+		<option VALUE=564>רבדים</option>
+		
+		<option VALUE=354>רביבים</option>
+		
+		<option VALUE=1225>רביד</option>
+		
+		<option VALUE=390>רגבה</option>
+		
+		<option VALUE=444>רגבים</option>
+		
+		<option VALUE=1161>רהט</option>
+		
+		<option VALUE=2051>רווחה</option>
+		
+		<option VALUE=2016>רוויה</option>
+		
+		<option VALUE=362>רוחמה</option>
+		
+		<option VALUE=539>רומאנה</option>
+		
+		<option VALUE=997>רומת הייב</option>
+		
+		<option VALUE=3619>רועי</option>
+		
+		<option VALUE=3782>רותם</option>
+		
+		<option VALUE=854>רחוב</option>
+		
+		<option VALUE=8400>רחובות</option>
+		
+		<option VALUE=3822>רחלים</option>
+		
+		<option VALUE=540>ריחאנייה</option>
+		
+		<option VALUE=3568>ריחן</option>
+		
+		<option VALUE=542>ריינה</option>
+		
+		<option VALUE=3565>רימונים</option>
+		
+		<option VALUE=616>רינתיה</option>
+		
+		<option VALUE=922>רכסים</option>
+		
+		<option VALUE=1069>רם-און</option>
+		
+		<option VALUE=4702>רמות</option>
+		
+		<option VALUE=206>רמות השבים</option>
+		
+		<option VALUE=735>רמות מאיר</option>
+		
+		<option VALUE=445>רמות מנשה</option>
+		
+		<option VALUE=372>רמות נפתלי</option>
+		
+		<option VALUE=8500>רמלה</option>
+		
+		<option VALUE=8600>רמת גן</option>
+		
+		<option VALUE=135>רמת דוד</option>
+		
+		<option VALUE=184>רמת הכובש</option>
+		
+		<option VALUE=335>רמת השופט</option>
+		
+		<option VALUE=2650>רמת השרון</option>
+		
+		<option VALUE=178>רמת יוחנן</option>
+		
+		<option VALUE=122>רמת ישי</option>
+		
+		<option VALUE=4701>רמת מגשימים</option>
+		
+		<option VALUE=339>רמת צבי</option>
+		
+		<option VALUE=460>רמת רזיאל</option>
+		
+		<option VALUE=127>רמת רחל</option>
+		
+		<option VALUE=789>רנן</option>
+		
+		<option VALUE=713>רעים</option>
+		
+		<option VALUE=8700>רעננה</option>
+		
+		<option VALUE=1228>רקפת</option>
+		
+		<option VALUE=247>רשפון</option>
+		
+		<option VALUE=437>רשפים</option>
+		
+		<option VALUE=1260>רתמים</option>
+		
+		<option VALUE=324>שאר ישוב</option>
+		
+		<option VALUE=282>שבי ציון</option>
+		
+		<option VALUE=3571>שבי שומרון</option>
+		
+		<option VALUE=913>שבלי - אום אל-גנם</option>
+		
+		<option VALUE=1286>שגב-שלום</option>
+		
+		<option VALUE=721>שדה אילן</option>
+		
+		<option VALUE=304>שדה אליהו</option>
+		
+		<option VALUE=861>שדה אליעזר</option>
+		
+		<option VALUE=885>שדה בוקר</option>
+		
+		<option VALUE=36>שדה דוד</option>
+		
+		<option VALUE=284>שדה ורבורג</option>
+		
+		<option VALUE=293>שדה יואב</option>
+		
+		<option VALUE=142>שדה יעקב</option>
+		
+		<option VALUE=2008>שדה יצחק</option>
+		
+		<option VALUE=18>שדה משה</option>
+		
+		<option VALUE=259>שדה נחום</option>
+		
+		<option VALUE=329>שדה נחמיה</option>
+		
+		<option VALUE=1058>שדה ניצן</option>
+		
+		<option VALUE=739>שדה עוזיהו</option>
+		
+		<option VALUE=2049>שדה צבי</option>
+		
+		<option VALUE=327>שדות ים</option>
+		
+		<option VALUE=27>שדות מיכה</option>
+		
+		<option VALUE=1223>שדי אברהם</option>
+		
+		<option VALUE=2015>שדי חמד</option>
+		
+		<option VALUE=2057>שדי תרומות</option>
+		
+		<option VALUE=555>שדמה</option>
+		
+		<option VALUE=306>שדמות דבורה</option>
+		
+		<option VALUE=3578>שדמות מחולה</option>
+		
+		<option VALUE=1031>שדרות</option>
+		
+		<option VALUE=741>שואבה</option>
+		
+		<option VALUE=761>שובה</option>
+		
+		<option VALUE=394>שובל</option>
+		
+		<option VALUE=1304>שוהם</option>
+		
+		<option VALUE=614>שומרה</option>
+		
+		<option VALUE=1265>שומרייה</option>
+		
+		<option VALUE=415>שוקדה</option>
+		
+		<option VALUE=456>שורש</option>
+		
+		<option VALUE=1235>שורשים</option>
+		
+		<option VALUE=224>שושנת העמקים</option>
+		
+		<option VALUE=527>שזור</option>
+		
+		<option VALUE=7>שחר</option>
+		
+		<option VALUE=1266>שחרות</option>
+		
+		<option VALUE=865>שיבולים</option>
+		
+		<option VALUE=658>שייח' דנון</option>
+		
+		<option VALUE=3641>שילה</option>
+		
+		<option VALUE=1165>שילת</option>
+		
+		<option VALUE=1160>שכניה</option>
+		
+		<option VALUE=873>שלווה</option>
+		
+		<option VALUE=439>שלוחות</option>
+		
+		<option VALUE=812>שלומי</option>
+		
+		<option VALUE=1364>שלומית</option>
+		
+		<option VALUE=366>שמיר</option>
+		
+		<option VALUE=3784>שמעה</option>
+		
+		<option VALUE=432>שמרת</option>
+		
+		<option VALUE=1337>שמשית</option>
+		
+		<option VALUE=1287>שני</option>
+		
+		<option VALUE=1132>שניר</option>
+		
+		<option VALUE=538>שעב</option>
+		
+		<option VALUE=4009>שעל</option>
+		
+		<option VALUE=856>שעלבים</option>
+		
+		<option VALUE=661>שער אפרים</option>
+		
+		<option VALUE=264>שער הגולן</option>
+		
+		<option VALUE=237>שער העמקים</option>
+		
+		<option VALUE=921>שער מנשה</option>
+		
+		<option VALUE=3720>שערי תקווה</option>
+		
+		<option VALUE=232>שפיים</option>
+		
+		<option VALUE=692>שפיר</option>
+		
+		<option VALUE=846>שפר</option>
+		
+		<option VALUE=8800>שפרעם</option>
+		
+		<option VALUE=3649>שקד</option>
+		
+		<option VALUE=1233>שקף</option>
+		
+		<option VALUE=292>שרונה</option>
+		
+		<option VALUE=1114>שריגים (לי-און)</option>
+		
+		<option VALUE=126>שריד</option>
+		
+		<option VALUE=398>שרשרת</option>
+		
+		<option VALUE=1045>שתולה</option>
+		
+		<option VALUE=763>שתולים</option>
+		
+		<option VALUE=2062>תאשור</option>
+		
+		<option VALUE=2061>תדהר</option>
+		
+		<option VALUE=1172>תובל</option>
+		
+		<option VALUE=3558>תומר</option>
+		
+		<option VALUE=1083>תושייה</option>
+		
+		<option VALUE=163>תימורים</option>
+		
+		<option VALUE=10>תירוש</option>
+		
+		<option VALUE=5000>תל אביב -יפו</option>
+		
+		<option VALUE=84>תל יוסף</option>
+		
+		<option VALUE=287>תל יצחק</option>
+		
+		<option VALUE=154>תל מונד</option>
+		
+		<option VALUE=103>תל עדשים</option>
+		
+		<option VALUE=719>תל קציר</option>
+		
+		<option VALUE=1054>תל שבע</option>
+		
+		<option VALUE=1283>תל תאומים</option>
+		
+		<option VALUE=3719>תלם</option>
+		
+		<option VALUE=1051>תלמי אליהו</option>
+		
+		<option VALUE=2003>תלמי אלעזר</option>
+		
+		<option VALUE=2050>תלמי ביל"ו</option>
+		
+		<option VALUE=1237>תלמי יוסף</option>
+		
+		<option VALUE=727>תלמי יחיאל</option>
+		
+		<option VALUE=744>תלמי יפה</option>
+		
+		<option VALUE=814>תלמים</option>
+		
+		<option VALUE=1244>תמרת</option>
+		
+		<option VALUE=2002>תנובות</option>
+		
+		<option VALUE=752>תעוז</option>
+		
+		<option VALUE=709>תפרח</option>
+		
+		<option VALUE=665>תקומה</option>
+		
+		<option VALUE=3563>תקוע</option>
+		
+		<option VALUE=1346>תרבין א-צאנע (יישוב)</option>
+		
+		<option VALUE=778>תרום</option>
+		
+	</select>
+
+	============================================================
+
+
+	
+Acre
+,Afula
+,Arad
+,Ariel
+,Ashdod
+,Ashkelon
+,Bat Yam
+,Beersheba
+,Beit Shean
+,Beit Shemesh
+,Beitar Illit
+,Bnei Brak
+,Dimona
+,Eilat
+,Elad
+,Givat Shmuel
+,Givatayim
+,Hadera
+,Haifa
+,Herzliya
+,Hod HaSharon
+,Holon
+,Jaffa
+,Jerusalem
+,Karmiel
+,Kiryat Arba
+,Kiryat Ata
+,Kiryat Bialik
+,Kiryat Gat
+,Kiryat Malakhi
+,Kiryat Motzkin
+,Kiryat Ono
+,Kiryat Shmona
+,Kiryat Tivon
+,Kiryat Yam
+,Kfar Saba
+,Lod
+,Maale Adumim
+,Maalot-Tarshiha
+,Metula
+,Migdal HaEmek
+,Modiin-Maccabim-Reut
+,Modiin Illit
+,Nahariya
+,Nazareth Illit 
+,Nesher
+,Ness Ziona
+,Netanya
+,Netivot
+,Ofakim
+,Or Akiva
+,Or Yehuda
+,Petah Tikva
+,Raanana
+,Ramat Gan
+,Ramat HaSharon
+,Ramla
+,Rehovot
+,Rishon LeZion
+,Rosh HaAyin
+,Rosh Pina
+,Safed
+,Sderot
+,Tel Aviv
+,Tiberias
+,Tirat Carmel
+,Yavne
+,Yehud-Monosson
+,Yokneam
+,Zikhron Yaakov

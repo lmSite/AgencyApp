@@ -1,0 +1,84 @@
+<style>
+  /* html{
+       background-image:url('img/bg1.jpg');
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+  } */
+  #contactForm{
+    width:98%;
+    height:calc(100vh - 95px);
+  background-color: rgba(255, 255, 255, 0.877);
+}
+</style>
+
+<div id="contactForm" class="container mx-auto  my-auto bgWhite shadow mx-auto clearfixApp">
+    <h1 class="headerFont shadow text-center " style="color:green">Contact</h1>
+    <div class="row  mt-3 ">
+        <!-- left Side -->
+        <div class=" col-6 ">
+
+            <div class="mx-auto " style="height:25%">
+                <!-- LM  Company Address -->
+                Ben Yehuda 100 street
+                <br>
+                Tel Aviv , Israel
+                <br>
+
+                <!-- LM Email -->
+                <label class="font-weight-bold">Email : &nbsp;</label>
+                <a href="mailto:lm@lm-net.com">
+                    <b class="text-success">lm@lm-net.com</b>
+                </a>
+                <br>
+
+                <!-- LM Tel -->
+                <label class="font-weight-bold">Tel : </label> 03-3330333
+                <br>
+            </div>
+            <!-- LM gMap -->
+            <div style="height:75%" class="mt-3">
+                <iframe width="100%" height="98%" frameborder="0" class="border-0" ng-src="{{query}}"></iframe>
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-6" style="height: 65vh ">
+           
+           
+            <!-- Action Msg -->
+            <div class="alert alert-success" role="alert" ng-show="isSent">
+                email sent .
+            </div> 
+
+
+            <div class="w-75  mx-auto">
+                <form id="myform">
+
+                    <label>Name</label>
+                    <input type="text" class="form-control shadow formCrl " ng-model="template_params.from_name" />
+                    
+                    
+                    <label>Email</label>
+                    <input type="text" class="form-control shadow formCrl " ng-model="template_params.from_email" />
+                    
+                    
+                    <label>Tel</label>
+                    <input type="tel" class="form-control shadow formCrl " ng-model="template_params.tel">
+                    
+                    
+                    <label>Message</label>
+                    <textarea class="form-control shadow" rows="2" ng-model="template_params.message_html"></textarea>
+                    <br>
+                    
+                    
+                    <!-- Action btn -->
+                    <p class="text-center"> <button type="button" ng-click="sendEmail()" class="btn  rounded shadow font-weight-bold btn-outline-success w-50  mx-auto ">Send</button></p>
+                
+                
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

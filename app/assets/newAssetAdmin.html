@@ -1,0 +1,254 @@
+<div ng-controller="assetsAdminCtrl" ng-cloak>
+  <!-- title  -->
+  <h1 class="title-tab my-5">New Asset</h1>
+  
+<!-- message -->
+  <div class="alert alert-success" role="alert" ng-show="isSavedNew"  >
+    inforamation has been saved .
+  </div>
+
+<!-- =============== FORM =================== -->
+ 
+  <form>
+
+    <!-- For Purpose -->
+    <div class="form-group row">
+      <label for="aforPurpose" class="col-sm-2 col-form-label">For Purpose</label>
+      <div class="col-sm-10">
+        <select id="aforPurpose" ng-model="forPurpose" class="form-control w-50">
+          <option value="sale">sale</option>
+          <option value="rent">rent</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Price -->
+    <div class="form-group row">
+      <label for="aprice" class="col-sm-2 col-form-label">Price</label>
+      <div class="col-sm-10">
+        <input type="number" id="aprice" ng-model="price" placeholder="Enter Price" class="form-control  w-50 p-1">
+      </div>
+    </div> 
+    
+    <!-- Asset Type -->
+    <div class="form-group row">
+      <label for="atype" class="col-sm-2 col-form-label">Asset Type</label>
+      <div class="col-sm-10">
+        <select id="atype" ng-model="type" aria-selected="undefined" class="form-control  w-50">
+          <option value="apartment">apartment</option>
+          <option value="private house">privat house</option>
+          <option value="property">property</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Evacuation Date -->
+    <div class="form-group row">
+      
+      <label for="aaevacuationDate" class="col-sm-2 col-form-label">Evacuation Date</label>
+      <div class="col-sm-10">
+        <select id="aaevacuationDate" ng-model="aevacuationDate" class="form-control  w-50">
+          <option value="flexible" >flexible</option>
+          <option value="immediate">immediate</option>
+          <option value="date">date</option>
+        </select>
+
+        <input type="date"  ng-hide="aevacuationDate!='date'"  ng-model="aevacuationDate1" class="form-control  w-50 ">
+      
+      </div>
+
+    </div>
+
+    <!-- Built Size -->
+    <div class="form-group row">
+      <label for="abuiltSize" class="col-sm-2 col-form-label">Built Size</label>
+      <div class="col-sm-10">
+        <input type="number" id="abuiltSize" ng-model="builtSize" placeholder="Enter Built Size" class="form-control  w-50 p-1">
+      </div>
+    </div> 
+
+    <!-- Property Size -->
+    <div class="form-group row">
+      <label for="size" class="col-sm-2 col-form-label">Property Size</label>
+      <div class="col-sm-10">
+        <input type="number" id="size" ng-model="size" placeholder="Enter Property Size" class="form-control  w-50 p-1">
+      </div>
+    </div> 
+
+    <!-- Rooms -->
+    <div class="form-group row">
+      <label for="arooms" class="col-sm-2 col-form-label">Rooms</label>
+      <div class="col-sm-10">
+        <select id="arooms" ng-model="rooms" class="form-control  w-50">
+          <option value="">בחר</option>
+          <option value="1">1</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4</option>
+          <option value="4.5">4.5</option>
+          <option value="5">5</option>
+          <option value="5.5">5.5</option>
+          <option value="6">6</option>
+          <option value="6.5">6.5</option>
+          <option value="7">7</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+    </div>
+
+    <!--Address  -->
+    <div class="form-row">
+      <div class="col-md-2 mb-3"> <label class="col-form-label">Address</label></div>
+      <div class="col-md-4 mb-3">
+        <label for="acity">City</label>
+        <select id="acity" ng-model="city" ng-options="city for city in cities | orderBy" class="form-control "></select>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="astreet">Street</label>
+        <input type="text" id="astreet" ng-model="street" placeholder="Enter street" class="form-control  p-1">
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="abuilding">Building number</label>
+        <input type="number" id="abuilding" ng-model="building" placeholder="Enter building number" class="form-control  w-50 p-1">
+      </div>
+    </div>
+
+    <!-- Floor -->
+    <div class="form-group row">
+      <label for="afloor" class="col-sm-2 col-form-label">Floor</label>
+      <div class="col-sm-10 ">
+        <select id="afloor"  ng-model="floor" class="form-control  w-50">
+          <option value="">בחר</option>
+          <option value="-1">מרתף</option>
+          <option value="0">קרקע</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20+</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Balconies -->
+    <div class="form-group row">
+      <label for="abalcony" class="col-sm-2 col-form-label">Balconies</label>
+      <div class="col-sm-10">
+        <input type="number" id="abalcony" ng-model="balcony" placeholder="Enter balconies number" class="form-control  w-50 p-1">
+      </div>
+    </div> 
+
+    <!--checkbox  -->
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">&nbsp;</label>
+      <div class="col-sm-10">
+        
+        <!-- airCondition -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="aairCondition" ng-model="airCondition">
+          <label class="form-check-label" for="aairCondition">
+            Air Condition
+          </label>
+        </div>
+
+        <!-- elevator -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="aelevator" ng-model="elevator">
+          <label class="form-check-label" for="aelevator">
+            Elevator
+          </label>
+        </div>
+
+        <!-- bars -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="abars" ng-model="bars">
+          <label class="form-check-label" for="abars">
+           Bars
+          </label>
+        </div>
+
+        <!-- parking -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="aparking" ng-model="parking">
+          <label class="form-check-label" for="aparking">
+            Parking
+          </label>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!-- Additional Info -->
+    <div class="form-group row">
+      <label for="ainfo" class="col-sm-2 col-form-label">Additional Info.</label>
+      <div class="col-sm-10">
+        <textarea class="form-control  w-50 " rows="5" id="ainfo" name="text" ng-model="info"></textarea>
+      </div>
+    </div> 
+   
+ <!-- ================================== -->
+ 
+    
+     <!-- Image Url => 5  -->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Image Url</label>
+      <div class="col-sm-10">
+      <p>
+        <input type="url" id="imgUrls1" ng-model="imgUrl1" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+      </p>
+      <p>
+        <input type="url" id="imgUrls2" ng-model="imgUrl2" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+      </p>  
+      <p>
+        <input type="url" id="imgUrls3" ng-model="imgUrl3" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+      </p>
+      <p>
+        <input type="url" id="imgUrls4" ng-model="imgUrl4" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+      </p>
+      <p>
+        <input type="url" id="imgUrls5" ng-model="imgUrl5" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+      </p>
+      </div>
+    </div>
+
+    <br/>
+
+    <!-- action btns -->
+    <div class="form-group row">
+      <div class="mx-auto ">
+       
+        <button type="button" class="btn btn-outline-secondary m-3 wBtnWidth" ng-click="clearFieldsNew()">Cancel</button>
+        <button type="button" class="btn btn-outline-success wBtnWidth" ng-click="createAsset()">Save</button>
+   
+      </div>
+    </div>
+    
+
+
+  </form>
+</div>

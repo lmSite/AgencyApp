@@ -1,0 +1,133 @@
+<div id="assetsSection" class="container assets" ng-controller="assetsAdminCtrl">
+
+  <h1 class="title-tab my-5">Assets</h1>
+
+  <input type="search" ng-model="searchText" class="w-25 mb-2 " placeholder="search ...">
+  <br>
+  <!-- search section -->
+  <section id="searchBox" class=" row sOutline p-1 ">
+    <form class="form-inline mx-auto my-auto">
+
+      <label class="label mr-2">city :</label>
+      <select id="sCity" ng-model="query.city" ng-options="city for city in cities | orderBy " style="width:130px">
+        <option value="">All</option>
+      </select>
+
+      <label class="label mx-2">rooms :</label>
+      <select id="room" ng-model="query.rooms" ng-options="room for room in sRooms" style="width:50px">
+        <option selected></option>
+      </select>
+
+      <label class="label mx-2">
+        <u>price </u>
+      </label>
+      <label class="mx-2">limit to :</label>
+      <input type="number" id="toPrice" ng-model="toPrice" class="form-control " maxlength="8" ng-model-options='{ debounce: 1500 }'>
+
+      <button class="btn btn-outline-secondary wBtnWidth mx-1" ng-click="clearSearch()">Clear</button>
+    </form>
+  </section>
+
+
+  <!-- The Modal : Update Asset -->
+  <div ng-include="'app/assets/updateAssetAdmin.html'"></div>
+
+  <div id="sResults">
+    <br>
+    <details class="card" ng-repeat="asset in assets  | filter:searchText  | filter:query | filter:pricefilter  ">
+      <!-- line = row -->
+      <summary class="">
+        <div class="row p-2  pb-0">
+          <!-- address -->
+          <div class="col-4 city">{{asset.city + ' , ' + asset.street + " " + asset.building }} </div>
+
+          <div class="col price">price : {{asset.price | number }}</div>
+
+          <div class="col rooms">rooms: {{asset.rooms }}</div>
+
+          <div class="col floor">floor: {{asset.floor }}</div>
+
+          <div class="col date">date : {{asset.evacuationDate }}</div>
+          <!-- flexible , immediate -->
+        </div>
+      </summary>
+
+      <!-- opened Asset Info -->
+      <div class="row mx-auto my-auto pt-3 ">
+        <!-- 1 sec : left side -->
+        <div class="col-4 ">
+          <!-- Action btns : delete  update -->
+          <div class=" p-2 clearfix">
+            <button ng-click="updateAsset(asset)" class="btn btn-outline-success  float-right" data-toggle="modal"
+              data-target="#assetModal">Update</button>
+            <button ng-click="deleteAsset(asset)" class="btn btn-outline-danger  float-left">delete</button>
+          </div>
+
+
+          <div class="">
+            <!-- Property Info -->
+            <div class="text-left title bgTitleY">Property Info. </div>
+            <div class="assetD">
+              <div class="row p-2 size ">
+                <div class="col-4 text-left ">size (mr) :</div>
+                <div class="col">{{asset.builtSize }}</div>
+              </div>
+              <div class="row p-2 balcony ">
+                <div class="col-4 text-left ">balcony :</div>
+                <div class="col">{{asset.balcony }}</div>
+              </div>
+            </div>
+
+            <!-- general info : checkbox -->
+            <div class=" pl-2 gInfo ">
+              <p>
+                <input type="checkbox" id="airCondition" ng-model="asset.airCondition" disabled> air condition</p>
+              <p>
+                <input type="checkbox" id="elevator" ng-model="asset.elevator" disabled> elevator</p>
+              <p>
+                <input type="checkbox" id="bars" ng-model="asset.bars" disabled> bars</p>
+              <p>
+                <input type="checkbox" id="parking" ng-model="asset.parking" disabled> parking</p>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="">
+              <div class="text-left title bgTitleY">Additional Info. </div>
+              <div class=" mb-2 pl-1 assetD">{{asset.info }}</div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <!-- 2 sec : right side -->
+        <div class="col-8 mx-auto my-auto">
+          <!-- carousel -->
+          <div id="myCarousel{{$index}}" class="carousel slide " data-interval="false">
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item " ng-class="$index==1 ? 'active' : ''" ng-repeat="img in asset.imgUrl track by $index">
+                <img ng-src="{{img}}" alt="asset image">
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <button class="carousel-control-prev" data-target="#myCarousel{{$index}}" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-target="#myCarousel{{$index}}" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <!-- End carousel -->
+          <br>
+
+        </div>
+
+      </div>
+    </details>
+
+  </div>
+</div>

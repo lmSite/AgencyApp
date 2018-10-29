@@ -1,0 +1,97 @@
+
+*{box-sizing: border-box;}
+
+/*
+
+https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=cover 
+https://www.w3schools.com/cssref/css3_pr_background-size.asp
+https://www.w3schools.com/css/css3_object-fit.asp
+
+
+*/
+
+html{
+    padding: 0px;
+    margin: 0px;
+    background-image:url('../img/bgIndex.jpg') ; 
+    background-repeat:no-repeat;
+    background-size:cover;/*100% 100%;*/
+}
+
+body {
+    background-color: transparent;
+}
+
+/* Make the image fully responsive */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-success1{background-color: rgb(66, 109, 3); opacity: 0.95;}
+
+.colorYG{color:greenyellow;}
+
+.bgColorYG{background-color:rgba(122, 197, 9, 0.767);}
+
+main{width:100%;}
+
+.bgWhite{background-color: rgba(255, 255, 255, 0.753);border: 10px double white;}
+
+
+.formCrl{line-height:1;}
+
+.header{font-family: 'Merienda', cursive;font-size: 34px;text-shadow:1px 3px 0 rgb(1, 214, 37);}
+
+.headerNav{font-family: 'Aladin', cursive;font-size: 24px ;}
+
+.footer{height:33px;}
+
+.borderC{border:10px double rgb(221, 250, 164)}
+
+.logo{width:50px;height:50px;}
+
+.headerFont{font-family: 'Merienda', sans-serif;font-size: 40px; text-shadow:1px 4px 0 rgb(1, 73, 13);}
+
+#contactMap{width:80%;}
+
+#myform label{color:green}
+
+.divContainer {
+    position: relative;
+    text-align: center;
+    width:700px;    
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: rgb(67, 85, 3);
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+
+
+  .w3-animate-zoom {animation:animatezoom 6.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+
+  .w3-animate-top{position:relative;animation:animatetop 4.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+
+  .b-radius-20{border-radius:20px}
+
+  .title-tab{color:rgb(160, 216, 77) ;font-size:36px; text-shadow:1px 3px 0 rgb(1, 73, 13);}
+
+
+  .clightGrey{background-color: rgb(211, 211, 211);}
+
+  .wBtnWidth{width: 100px}
+
+  .col-form-label{color:rgb(8, 8, 8);}
+
+  .w-90{width:95%}
+
+  .clearfixApp {
+    overflow: auto;
+}

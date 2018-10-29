@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="css/styleLogin.css">
+<div class=" my-2" >
+    
+    <div class="login-box signup-box  shadow my-auto mx-auto w3-center b-radius-20" >
+       
+        <!-- home icon -->
+        <div class="text-left">
+            <a href="#!/">
+                <i class="fas fa-home  fa-2x" style="color:rgb(251, 255, 0)"></i>
+            </a> 
+        </div>
+
+
+        <h1 class=" header">
+                <img src="img/sign-up-icon-33.png" class="w-25"><br>
+           <div class="my-3">Signup</div> 
+        </h1>
+        
+        <!--  FORM  -->
+        <form  ng-submit="submitForm()" class="text-left">
+
+            <p>Email
+                <input type="email" id="email" ng-model="email" placeholder="Enter email" class="rounded p-1" required>
+            </p>
+
+
+            <p>
+                Password
+                <input type="password" id="password" ng-model="password" placeholder="Enter Password" class="rounded p-1" required>
+            </p>
+
+
+            <p>
+                Agency
+                <input type="text" id="agency" ng-model="agency"  placeholder="Enter agency name" class="rounded p-1" required>
+            </p>
+
+
+            <p>
+                Tel
+                <input type="tel" id="tel" ng-model="tel" placeholder="Enter telephone" class="rounded p-1">
+            </p>
+
+
+            <p>
+                City
+                <input type="text" id="city" ng-model="city" placeholder="Enter city" class="rounded p-1">
+            </p>
+
+
+            <p>
+                Street
+                <input type="text" id="street" ng-model="street" placeholder="Enter street" class="rounded p-1">
+            </p>
+
+
+            <p>
+                Building
+                <input type="number" id="building" ng-model="building" placeholder="Enter building number" class="rounded p-1">
+            </p>
+
+
+            <p>
+                Postal
+                <input type="number" id="postal" ng-model="postal" placeholder="Enter postal code" class="rounded p-1">
+            </p>
+
+
+            <p>
+                Image Url
+                <input type="url" id="imgUrl" ng-model="imgUrl" placeholder="Enter image url" ng-modal="imgUrl" class="rounded p-1">
+            </p>
+
+            
+            <!--Sign Up => Action btn -->
+            <input type="submit" name="submit" value="Create an account"  class="mt-5 mb-0 pb-0">
+
+        </form>
+
+    </div>
+</div>

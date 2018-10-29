@@ -1,0 +1,262 @@
+<!-- The Modal : Update Asset ng-controller="assetsAdminCtrl"-->
+ <style>
+       .modal{
+           background: rgba(232, 252, 179, 0.63);
+       }
+       .close-btn {
+          color:rgb(9, 136, 175);
+            font-size: 50px;
+            line-height: 78px;           
+            cursor: pointer;
+          
+        }
+        .modal-dialog{
+    max-width:100%;
+}
+  
+</style>
+
+
+<div class="modal fade shadow px-4" id="assetModal" ng-controller="assetUpdateCtrl">
+  <div class="modal-dialog modal-dialog-centered " valign="center">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bgColorYG shadow text-white">
+        <h4 class="modal-title">Asset Update - ( id : {{assetUpdate.id}} ) </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <!-- <div class="alert alert-success" role="alert" ng-show="isAssetUpd"  >
+                  inforamation has been saved .
+                </div> -->
+        
+        
+      <!-- =============== FORM =================== -->
+
+
+        <form>
+          <!-- For Purpose -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">For Purpose</label>
+            <div class="col-sm-10">
+              <select ng-model="assetUpdate.forPurpose" class="form-control w-50">
+                <option value="sale">sale</option>
+                <option value="rent">rent</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+              <input type="number" ng-model="assetUpdate.price" placeholder="Enter Price" class="form-control  w-50 p-1">
+            </div>
+          </div>
+
+          <!-- Asset Type -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Asset Type</label>
+            <div class="col-sm-10">
+              <select ng-model="assetUpdate.type" aria-selected="undefined" class="form-control  w-50">
+                <option value="apartment">apartment</option>
+                <option value="private house">privat house</option>
+                <option value="property">property</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Evacuation Date -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Evacuation Date</label>
+            <div class="col-sm-10">             
+              <p class="input-group">
+                 {{assetUpdate.evacuationDate }} 
+                
+                    <input type="image"  src="img/calendar.png"  width="20px" height="20px" class="mx-1" ng-click="open2()">
+                  
+                   <input type="text" ng-model="dt" class="w-2 border-0" uib-datepicker-popup is-open="popup2.opened"  
+                  datepicker-options="dateOptions" close-text="Close"  ng-change="assetUpdate.evacuationDate=''" />
+                
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Built Size  -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Built Size</label>
+            <div class="col-sm-10">
+              <input type="number" ng-model="assetUpdate.builtSize" placeholder="Enter Built Size" class="form-control  w-50 p-1">
+            </div>
+          </div>
+
+          <!-- Property Size -->
+          <div class="form-group row" ng-hide="assetUpdate.type!='property'">
+            <label class="col-sm-2 col-form-label">Property Size</label>
+            <div class="col-sm-10">
+              <input type="number" ng-model="assetUpdate.size" placeholder="Enter Property Size" class="form-control  w-50 p-1">
+            </div>
+          </div>
+
+          <!-- Rooms -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Rooms</label>
+            <div class="col-sm-10">
+              <select ng-model="assetUpdate.rooms" class="form-control  w-50" aria-selected="undefined">
+                <option>בחר</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="form-row">
+            <div class="col-md-2 mb-3"> <label class="col-form-label">Address</label></div>
+            
+            <!-- City -->
+            <div class="col-md-4 mb-3">
+              <label>City</label>
+              <select ng-model="assetUpdate.city" ng-options="city for city in cities | orderBy" class="form-control "></select>
+            </div>
+
+            <!-- Street -->
+            <div class="col-md-3 mb-3">
+              <label>Street</label>
+              <input type="text" ng-model="assetUpdate.street" placeholder="Enter street" class="form-control  p-1">
+            </div>
+
+            <!-- Building number -->
+            <div class="col-md-3 mb-3">
+              <label>Building number</label>
+              <input type="number" ng-model="assetUpdate.building" placeholder="Enter building number" class="form-control  w-50 p-1">
+            </div>
+
+          </div>
+
+          <!-- Floor -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Floor</label>
+            <div class="col-sm-10 ">
+              <select ng-model="assetUpdate.floor" class="form-control  w-50">
+                <option>בחר</option>
+                <option value="-1">מרתף</option>
+                <option value="0">קרקע</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Balconies -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Balconies</label>
+            <div class="col-sm-10">
+              <input ng-model="assetUpdate.balcony" placeholder="Enter balconies number" class="form-control  w-50 p-1">
+            </div>
+          </div>
+
+
+          <!-- info -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">info.</label>
+            <div class="col-sm-10">
+             <!-- Air Condition -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" ng-model="assetUpdate.airCondition">
+                <label class="form-check-label">
+                  Air Condition
+                </label>
+              </div>
+
+              <!-- Elevator -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" ng-model="assetUpdate.elevator">
+                <label class="form-check-label">
+                  Elevator
+                </label>
+              </div>
+
+              <!-- Bars -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" ng-model="assetUpdate.bars">
+                <label class="form-check-label">
+                  Bars
+                </label>
+              </div>
+
+              <!-- Parking -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" ng-model="assetUpdate.parking">
+                <label class="form-check-label">
+                  Parking
+                </label>
+              </div>
+
+
+            </div>
+          </div>
+          
+
+          <!-- Additional Info -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Additional Info.</label>
+            <div class="col-sm-10">
+              <textarea class="form-control  w-50 " rows="5" name="text" ng-model="assetUpdate.info"></textarea>
+            </div>
+          </div>
+
+
+          <!--   img urls => 5  -->
+
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Image Url</label>
+            <div class="col-sm-10">
+              <p>
+                <input type="url" ng-model="assetUpdate.imgUrl[0]" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+              </p>
+              <p>
+                <input type="url" ng-model="assetUpdate.imgUrl[1]" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+              </p>
+              <p>
+                <input type="url" ng-model="assetUpdate.imgUrl[2]" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+              </p>
+              <p>
+                <input type="url" ng-model="assetUpdate.imgUrl[3]" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+              </p>
+              <p>
+                <input type="url" ng-model="assetUpdate.imgUrl[4]" placeholder="Enter Asset's Image Url" class="form-control w-75 p-1">
+              </p>
+            </div>
+          </div>
+
+
+          <br>
+        
+        </form>
+      </div>
+
+      <!-- Modal footer : Action btns -->
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-outline-secondary m-3 wBtnWidth" data-dismiss="modal" ng-click="cancelAssetUpdate()"  data-dismiss="{{modalUpdate}}">Cancel</button>
+        <button type="button" class="btn btn-outline-success wBtnWidth" ng-click="saveAssetUpdate(assetUpdate)"
+          data-dismiss="{{modalUpdate}}">Save</button>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

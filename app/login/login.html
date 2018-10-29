@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="css/styleLogin.css">
+<div class="flex-container " ng-cloak>
+    <div class="login-box shadow mx-auto my-auto text-center b-radius-20">
+
+        <!-- home icon -->
+        <div class="text-left">
+            <a href="#!/">
+                <i class="fas fa-home  fa-2x" style="color:rgb(251, 255, 0)"></i>
+            </a>
+        </div>
+
+        <img src="img/green-user-icon.png" class="avatar ">
+
+        
+        <h1 class="header ">Login</h1>
+
+
+        <!-- Actiom Msg -->
+        <div class="alert alert-danger" role="alert" ng-show="invalidLogin">
+            Invalid Credentials!
+        </div>
+
+
+        <form class="text-left">
+
+            <p>Email</p>
+            <input type="email" id="email" ng-model="email" placeholder="Enter email" class="rounded p-1">
+
+
+            <p>Password</p>
+            <input type="password" id="password" ng-model="password" placeholder="Enter Password" class="rounded p-1"
+                data-ng-keydown="( $event.keyCode === 13) ? login() : false">
+
+
+            <!-- Login btn -->
+            <input type="button" name="submit" value="Login" ng-click="isclicked=true;login();" ng-hide="isclicked==true;">
+
+            <button class="buttonload" name="submit" ng-show="isclicked==true;" disabled="disabled">
+                <i class="fa fa-spinner fa-spin"></i>Login
+            </button>
+            <!-- End Login btn -->
+
+
+            <!-- <a href="#" class="float-right">Forget Password</a>  -->
+            <br>
+
+            <!-- sign up link -->
+            <a ng-href="#!/signup" class="">create an account</a>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="css/admin.css">
+<style>
+  /* classes */
+  .fieldTitle {font-weight:bold;} 
+  .marked{background-color: greenyellow}
+ 
+  /* tags */
+   a {text-decoration: none}
+    
+</style>
+
+<div id="assetsGallery" class="container-fluid  admin-box">
+
+  <p class="text-center mt-3">
+    <h1 class="header text-center" style="font-size: 46px">Assets</h1>
+  </p>
+
+  <!-- search section -->
+  <section id="searchSection" class="mb-3">
+    <input type="search" ng-model="searchText" class="w-25 mb-2 " placeholder="search ...">
+    <br>
+
+    <div id="searchBox" class=" row sOutline p-1 ">
+
+      <form class="form-inline mx-auto my-auto">
+        
+        <!-- city -->
+        <label class="label mr-2">city :</label>
+        <select id="sCity" ng-model="query.city" ng-options="city for city in cities | orderBy" style="width:130px">
+          <option value="">All</option>
+        </select>
+        
+        <!-- asset type -->
+        <label class="label mr-2">type :</label>
+        <!--        type: apartment , privat house , property -->
+        <select id="sCity" ng-model="query.type" style="width:130px">
+          <option value="">All</option>
+          <option value="apartment">apartment</option>
+          <option value="privat house">privat house</option>
+          <option value="property">property</option>
+        </select>
+
+        <!-- rooms -->
+        <label class="label mx-2">rooms :</label>
+        <select id="room" ng-model="query.rooms" ng-options="room for room in rooms" style="width:50px">
+        </select>
+        
+        <!-- price limit -->
+        <label class="label mx-2">
+          <u>price </u>
+        </label>
+
+        <label class="mx-2">limit to :</label>
+        <input type="number" ng-model="toPrice" class="form-control " maxlength="8" ng-model-options='{ debounce: 1500 }'>
+
+        <!-- clear btn -->
+        <button type="reset" class="btn btn-outline-secondary wBtnWidth mx-1" ng-click="clearSearch()">Clear</button>
+      
+      
+      </form>
+    </div>
+  </section>
+  <!-- end search section -->
+
+
+
+
+
+  <div id="sResults" class="row">
+    <div class="col-lg-3 col-md-6  mx-auto my-auto p-1" ng-repeat="asset in assets | filter:searchText | filter:query | filter:pricefilter">
+      
+      <!-- card -->
+      <a href="{{'#!/assets/'+ asset.id}}">
+        
+        <div class="card " style="height:400px;">
+
+          <!-- asset img -->
+          <div class="bg-white">
+
+            <img class="img-thumbnail d-block mx-auto my-auto pt-1 shadow" ng-src="{{asset.imgUrl[0]}}" alt="asset image"
+              style="width:99%;height:200px">
+
+          </div>
+
+
+          <!-- card-body -->
+          <div class="card-body text-success" style="height:160px">
+
+            <h5 class="text-center "><mark class="marked">{{(asset.price | number) +' ILS'}} </mark></h5>
+
+            <h4 class="card-title "> {{asset.type + ' '+asset.rooms + ' rooms'}} in {{asset.city}}</h4>
+
+            <p class="card-text" ng-if="asset.street"><i class="fas fa-map-marker-alt"></i>
+              &nbsp;{{asset.street +' street'}}
+            </p>
+
+          </div>
+
+
+          <!-- card-footer -->
+          <div class="card-footer text-success" style="height:40px">
+            <div class=" row p-0">
+
+              <div class="col-3 small p-0" ng-if="asset.builtSize">
+                <span class="fieldTitle">Size : </span>{{asset.builtSize + ' mr.'}}
+              </div>
+
+              <div class="col-6 small p-0 text-center" ng-if="asset.evacuationDate">
+                <span class="fieldTitle">Evacuation :</span> {{asset.evacuationDate}}
+              </div>
+
+              <div class="col-3 small p-0 text-right" ng-if="asset.floor!='0'"><span class="fieldTitle">Floor :</span>
+                {{asset.floor }}
+              </div>
+
+            </div>
+
+          </div>
+
+          
+
+        </div>
+        <!-- end card -->
+    </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+ <!-- The Modal : Close Account -->
+<div class=" modal " id="myModal" >
+  <div class="modal-dialog w-50">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Account Closing</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p class="text-danger">You about to close your account</p>
+        <p class="text-danger">closing your account means <b>All your data will be deleted !!!</b></p>
+        <br>
+
+        <br>
+        <p>
+          <h6 class="text-secondary">* To close the account we need to verify that it's your </h6>
+        </p>
+        <br>
+        
+        <p>email : {{activeUser.email}} </p>
+        <br>
+        <!-- checking by pwd -->
+        <p class="text-danger" ng-show="isPwd">password incorect !</p>
+
+        <input type="password" ng-model="pwd" class="form-control border" 
+        placeholder=" enter your password to confirm" style="border:1px soild green;" size=20>
+
+        <p></p>
+
+      </div>
+
+      <!-- Modal footer  : Action btns -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" id="aCloseModal" class="btn  btn-outline-danger" ng-click="closeAccount(pwd);" data-dismiss="{{modal}}" >Close Account</button>
+      </div>
+
+    </div>
+  </div>
+</div>
